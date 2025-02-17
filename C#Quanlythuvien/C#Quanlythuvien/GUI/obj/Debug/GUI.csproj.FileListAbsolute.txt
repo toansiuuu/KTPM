@@ -1,0 +1,283 @@
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\GUI.exe.config
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\GUI.exe
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\GUI.pdb
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.UI_ThuThu.resources
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.exe
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.pdb
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_Sach.resources
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.Quanlysach.resources
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\obj\Debug\GUI.ThemTuaSach.resources
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\BUS.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\DTO.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\DAO.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\BUS.pdb
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\DTO.pdb
+C:\Users\letan\source\repos\C#Quanlythuvien\GUI\bin\Debug\DAO.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\GUI.exe.config
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\GUI.exe
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\GUI.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\BUS.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\DTO.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\DAO.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\BUS.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\DTO.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\bin\Debug\DAO.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_Sach.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.Quanlysach.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.ThemTuaSach.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.UI_ThuThu.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.exe
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TacGia.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaTacGia.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTacGia.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.TacGiaUserControl.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TheLoai.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNhanVien.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhanVien.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.NhanVienUserControl.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.formThemNhanVien.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\GUI.exe.config
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\GUI.exe
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\GUI.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\BUS.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\DTO.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\FontAwesome.Sharp.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\DAO.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\BUS.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\DTO.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\bin\Debug\DAO.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.formThemNhanVien.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNhanVien.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaTacGia.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTacGia.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhanVien.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_Sach.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TacGia.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TheLoai.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.NhanVienUserControl.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.Properties.Resources.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.Quanlysach.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.TacGiaUserControl.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.ThemTuaSach.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.UI_ThuThu.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CopyComplete
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.exe
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NCC.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TaiKhoan.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.formGanQuyen.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.frmXemChiTietCuonSachMuon.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_MuonSach.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_PhanQuyen.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TraSach.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.Login.resources
+E:\Nam3_Ky1\C#\C#Quanlythuvien\GUI\obj\Debug\GUI.frmPhanQuyen.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\GUI.exe.config
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\GUI.exe
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\GUI.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\BUS.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\DAO.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\BUS.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\bin\Debug\DAO.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.formThemNhanVien.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmPhanQuyen.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNhanVien.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaTacGia.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTacGia.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmXemChiTietCuonSachMuon.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_MuonSach.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NCC.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhanVien.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_PhanQuyen.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_Sach.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TacGia.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TaiKhoan.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TheLoai.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TraSach.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.Login.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.NhanVienUserControl.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.Quanlysach.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.TacGiaUserControl.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.ThemTuaSach.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.UI_ThuThu.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.exe
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NXB.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNXB.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNXB.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaPhieuNhap.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTS_PN.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhapHang.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_DocGia.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.GiaHanThe.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNCC.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNCC.resources
+C:\Users\Admin\Desktop\C#Quanlythuvien\GUI\obj\Debug\GUI.frmGanQuyen.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmGanQuyen.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmPhanQuyen.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNCC.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNXB.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaPhieuNhap.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNCC.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNXB.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTS_PN.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.frmXemChiTietCuonSachMuon.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GiaHanThe.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_DocGia.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_MuonSach.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NCC.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhapHang.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NXB.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_PhanQuyen.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TaiKhoan.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TraSach.resources
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\GUI\obj\Debug\GUI.Login.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\GUI.exe.config
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\GUI.exe
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\GUI.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\BUS.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\DTO.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\FontAwesome.Sharp.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\DAO.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\BUS.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\DTO.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\DAO.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.formThemNhanVien.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmGanQuyen.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmPhanQuyen.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNCC.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNhanVien.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNXB.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaPhieuNhap.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaTacGia.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNCC.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNXB.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTacGia.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTS_PN.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmXemChiTietCuonSachMuon.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GiaHanThe.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_DocGia.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_MuonSach.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NCC.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhanVien.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhapHang.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NXB.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_PhanQuyen.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_Sach.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TacGia.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TaiKhoan.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TheLoai.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TraSach.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.Login.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.NhanVienUserControl.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.Quanlysach.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.TacGiaUserControl.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.ThemTuaSach.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.UI_ThuThu.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.exe
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.frmInfoNV.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_ThongKe.resources
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\EPPlus.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\EPPlus.Interfaces.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\EPPlus.System.Drawing.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\System.ComponentModel.Annotations.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\EPPlus.xml
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\IKVM.Runtime.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\BouncyCastle.Crypto.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\itextsharp.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\GUI\bin\Debug\itextsharp.xml
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.exe
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\GUI.exe.config
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\GUI.exe
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\GUI.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\BouncyCastle.Crypto.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\BUS.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\DTO.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\EPPlus.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\EPPlus.Interfaces.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\EPPlus.System.Drawing.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\FontAwesome.Sharp.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\IKVM.Runtime.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\itextsharp.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\System.ComponentModel.Annotations.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\DAO.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\BUS.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\DTO.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\EPPlus.xml
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\itextsharp.xml
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\bin\Debug\DAO.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.formThemNhanVien.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmGanQuyen.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmInfoNV.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmPhanQuyen.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNCC.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNhanVien.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaNXB.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaPhieuNhap.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmSuaTacGia.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNCC.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemNXB.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTacGia.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmThemTS_PN.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.frmXemChiTietCuonSachMuon.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GiaHanThe.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_DocGia.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_MuonSach.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NCC.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhanVien.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NhapHang.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_NXB.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_PhanQuyen.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_Sach.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TacGia.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TaiKhoan.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TheLoai.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_ThongKe.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.GUI_TraSach.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.Login.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.NhanVienUserControl.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.Quanlysach.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.TacGiaUserControl.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.ThemTuaSach.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.UI_ThuThu.resources
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\GUI\obj\Debug\GUI.csproj.CopyComplete

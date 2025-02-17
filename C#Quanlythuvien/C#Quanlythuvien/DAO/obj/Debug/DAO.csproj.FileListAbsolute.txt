@@ -1,0 +1,54 @@
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
+C:\Users\letan\source\repos\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
+C:\Users\defaultuser0.LAPTOP-POTNR7PE\OneDrive\Máy tính\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
+E:\Nam3_Ky1\C#\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
+C:\Users\Admin\Desktop\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
+D:\sgu\Nam 3\C#\DoAn\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
+D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
