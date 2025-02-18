@@ -40,5 +40,7 @@ namespace GUI
             string imagePath = Path.Combine(projectDirectory2, "Image", "NhanVien", nhanVien.Img);
             pictureBox1.Image = new Bitmap(imagePath);
         }
+
+        
     }
 }

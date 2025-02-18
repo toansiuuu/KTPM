@@ -88,10 +88,7 @@ namespace GUI
                 return true;
             }
 
-        private void txt_donGia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
     }

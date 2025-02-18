@@ -219,7 +219,10 @@ namespace GUI
                 MessageBox.Show("Tên chỉ được chứa chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
+            if(!IsValidAddress(txt_diachi.Text)){
+                MessageBox.Show("Độ dài địa chỉ 5 đến 100 và không chứa kí tự đặc biệt", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             if (!IsOnlyDigits(txt_sdt.Text))
             {
                 MessageBox.Show("SDT chỉ được chứa số và phải đủ 10 số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -238,6 +241,27 @@ namespace GUI
         {
             string pattern = "^[A-Za-zÀ-ỹ ]*$";
             return Regex.IsMatch(str, pattern);
+        }
+        static bool IsValidAddress(string address)
+        {
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                return false; // Địa chỉ không được để trống
+            }
+
+            if (address.Length < 5 || address.Length > 100)
+            {
+                return false; // Địa chỉ phải từ 5 đến 100 ký tự
+            }
+
+            // Chỉ cho phép chữ cái, số, khoảng trắng và các ký tự hợp lệ: , . -
+            string pattern = @"^[a-zA-Z0-9\s,.-]+$";
+            if (!Regex.IsMatch(address, pattern))
+            {
+                return false; // Địa chỉ chứa ký tự không hợp lệ
+            }
+
+            return true;
         }
         static bool IsOnlyDigits(string str)
         {
@@ -281,6 +305,6 @@ namespace GUI
             return imagePath;
         }
 
-        
+       
     }
 }
