@@ -38,6 +38,8 @@
             this.txt_donGia = new System.Windows.Forms.TextBox();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
+            this.lblTrietKhau = new System.Windows.Forms.Label();
+            this.txtTrietKhau = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -118,7 +120,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(66, 224);
+            this.btn_them.Location = new System.Drawing.Point(65, 277);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(111, 43);
             this.btn_them.TabIndex = 8;
@@ -128,7 +130,7 @@
             // 
             // btn_thoat
             // 
-            this.btn_thoat.Location = new System.Drawing.Point(221, 224);
+            this.btn_thoat.Location = new System.Drawing.Point(225, 277);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(114, 43);
             this.btn_thoat.TabIndex = 9;
@@ -136,10 +138,30 @@
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
+            // lblTrietKhau
+            // 
+            this.lblTrietKhau.AutoSize = true;
+            this.lblTrietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrietKhau.Location = new System.Drawing.Point(33, 224);
+            this.lblTrietKhau.Name = "lblTrietKhau";
+            this.lblTrietKhau.Size = new System.Drawing.Size(99, 25);
+            this.lblTrietKhau.TabIndex = 10;
+            this.lblTrietKhau.Text = "Triết khấu";
+            // 
+            // txtTrietKhau
+            // 
+            this.txtTrietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrietKhau.Location = new System.Drawing.Point(194, 219);
+            this.txtTrietKhau.Name = "txtTrietKhau";
+            this.txtTrietKhau.Size = new System.Drawing.Size(211, 30);
+            this.txtTrietKhau.TabIndex = 11;
+            // 
             // frmThemTS_PN
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(435, 294);
+            this.ClientSize = new System.Drawing.Size(435, 342);
+            this.Controls.Add(this.txtTrietKhau);
+            this.Controls.Add(this.lblTrietKhau);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.txt_donGia);
@@ -171,5 +193,7 @@
         private System.Windows.Forms.TextBox txt_donGia;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.Label lblTrietKhau;
+        private System.Windows.Forms.TextBox txtTrietKhau;
     }
 }

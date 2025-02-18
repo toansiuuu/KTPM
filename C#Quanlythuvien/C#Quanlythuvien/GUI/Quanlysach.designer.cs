@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quanlysach));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.txtGiaBia = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnTrangThai = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -88,7 +92,9 @@
             this.moTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.image = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -105,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel21);
             this.panel1.Controls.Add(this.btnTrangThai);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.panel19);
@@ -127,6 +134,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1411, 402);
             this.panel1.TabIndex = 1;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.panel22);
+            this.panel21.Controls.Add(this.txtGiaBia);
+            this.panel21.Controls.Add(this.label9);
+            this.panel21.Location = new System.Drawing.Point(605, 223);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(293, 39);
+            this.panel21.TabIndex = 11;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel22.Location = new System.Drawing.Point(0, 36);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(293, 3);
+            this.panel22.TabIndex = 2;
+            // 
+            // txtGiaBia
+            // 
+            this.txtGiaBia.BackColor = System.Drawing.Color.White;
+            this.txtGiaBia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiaBia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaBia.Location = new System.Drawing.Point(114, 13);
+            this.txtGiaBia.Name = "txtGiaBia";
+            this.txtGiaBia.ReadOnly = true;
+            this.txtGiaBia.Size = new System.Drawing.Size(161, 23);
+            this.txtGiaBia.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 25);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Giá Bìa";
             // 
             // btnTrangThai
             // 
@@ -434,7 +481,7 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.txtTheloai);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(273, 241);
+            this.panel9.Location = new System.Drawing.Point(273, 284);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(458, 39);
             this.panel9.TabIndex = 6;
@@ -668,7 +715,8 @@
             this.soLuong,
             this.moTa,
             this.image,
-            this.status});
+            this.status,
+            this.GiaBia});
             this.tableSach.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableSach.Location = new System.Drawing.Point(12, 427);
             this.tableSach.Name = "tableSach";
@@ -678,7 +726,7 @@
             this.tableSach.Size = new System.Drawing.Size(1410, 464);
             this.tableSach.TabIndex = 2;
             this.tableSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableSach_CellClick);
-            // 
+              // 
             // maSach
             // 
             this.maSach.HeaderText = "Mã sách";
@@ -749,6 +797,13 @@
             this.status.Name = "status";
             this.status.ReadOnly = true;
             // 
+            // GiaBia
+            // 
+            this.GiaBia.HeaderText = "Giá Bìa";
+            this.GiaBia.MinimumWidth = 6;
+            this.GiaBia.Name = "GiaBia";
+            this.GiaBia.ReadOnly = true;
+            // 
             // Quanlysach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -761,6 +816,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Quanlysach_Load);
             this.panel1.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -832,6 +889,13 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView tableSach;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnTrangThai;
+        private System.Windows.Forms.ComboBox cbNxb;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.TextBox txtGiaBia;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTacgia;
@@ -841,9 +905,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn moTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn image;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.Button btnTrangThai;
-        private System.Windows.Forms.ComboBox cbNxb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaBia;
     }
 }

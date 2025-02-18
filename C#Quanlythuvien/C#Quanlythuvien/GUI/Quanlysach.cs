@@ -74,6 +74,7 @@ namespace GUI
             ts.SGNamXB = Convert.ToInt32(txtNamXB.Text);
             ts.SGMaNXB = cbNxb.SelectedItem.ToString();
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
+            ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
             ts.SGMaTacGia = cbTacGia.SelectedItem.ToString();
             ts.SGTrangThai = status1;
             //Anh
@@ -91,6 +92,7 @@ namespace GUI
             ts.SGNamXB = Convert.ToInt32(txtNamXB.Text);
             ts.SGMaNXB = cbNxb.SelectedItem.ToString();
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
+            ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
             ts.SGMaTacGia = cbTacGia.SelectedItem.ToString();
             ts.SGTrangThai = true;
             //Anh
@@ -133,6 +135,7 @@ namespace GUI
             //txtMaNXB.Text = ts.SGMaNXB;
             txtNamXB.Text = ts.SGNamXB.ToString();
             txtSoluong.Text = ts.SGSoLuong.ToString();
+            txtGiaBia.Text = ts.SGGiaBia.ToString();
             txtMota.Text = ts.SGMoTa;
             status1 = ts.SGTrangThai;
 
@@ -213,7 +216,8 @@ namespace GUI
                     tuasach.SGSoLuong,
                     tuasach.SGMoTa,
                     tuasach.SGImage,
-                    tuasach.SGTrangThai ? "Hiện" : "Ẩn"
+                    tuasach.SGTrangThai ? "Hiện" : "Ẩn",
+                    tuasach.SGGiaBia
                     ); ;
                            
                     
@@ -304,6 +308,7 @@ namespace GUI
         {
             btnUpdate.Enabled = false;
             btnTrangThai.Enabled = false;
+
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string projectDirectory = Directory.GetParent(baseDirectory).Parent.FullName;
             string projectDirectory2 = Directory.GetParent(projectDirectory).Parent.FullName;
@@ -316,6 +321,7 @@ namespace GUI
             cbTacGia.SelectedIndex = 0;
             cbNxb.SelectedIndex = 0;
             txtNamXB.Text = "";
+            txtGiaBia.Text = "";
             txtMota.Text = "";
             path_anh = "default.png";
             duongdananh = imagePath;
@@ -516,6 +522,10 @@ namespace GUI
 
         static void ExportToExcel(List<TuaSach> list, string filePath)
         {
+            // Thiết lập LicenseContext để tránh lỗi LicenseException
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+
             // Tạo một gói Excel
             using (var package = new ExcelPackage())
             {
@@ -541,6 +551,8 @@ namespace GUI
                 worksheet.Cells["F2"].Value = "Năm Xuất Bản";
                 worksheet.Cells["G2"].Value = "Mô Tả";
                 worksheet.Cells["H2"].Value = "Trạng Thái";
+                worksheet.Cells["I2"].Value = "Giá Bìa";
+
                 // Thiết lập giá trị từ danh sách vào các ô từ dòng 3 trở đi
                 for (int i = 0; i < list.Count; i++)
                 {
@@ -551,20 +563,16 @@ namespace GUI
                     worksheet.Cells["E" + (i + 3)].Value = list[i].SGMaNXB;
                     worksheet.Cells["F" + (i + 3)].Value = list[i].SGNamXB;
                     worksheet.Cells["G" + (i + 3)].Value = list[i].SGMoTa;
-                    if (list[i].SGTrangThai)
-                    {
-                        worksheet.Cells["H" + (i + 3)].Value = "Đang Hoạt Động";
-                    }
-                    else
-                    {
-                        worksheet.Cells["H" + (i + 3)].Value = "Ngừng Hoạt Động";
-                    }
+                    worksheet.Cells["H" + (i + 3)].Value = list[i].SGTrangThai ? "Đang Hoạt Động" : "Ngừng Hoạt Động";
+                    worksheet.Cells["I" + (i + 3)].Value = list[i].SGGiaBia;
                 }
+
                 // Lưu tệp Excel
                 FileInfo excelFile = new FileInfo(filePath);
                 package.SaveAs(excelFile);
             }
         }
+
         private void btnExcel_Click(object sender, EventArgs e)
         {
             // Tạo một hộp thoại lựa chọn tệp
@@ -717,5 +725,7 @@ namespace GUI
         {
 
         }
+
+       
     }
 }

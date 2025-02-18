@@ -32,11 +32,13 @@ namespace DAO
                         ts.SGTenTuaSach = reader.GetString(1);
                         ts.SGMaNXB = reader.GetString(2);
                         ts.SGSoLuong = reader.GetInt32(3);
+                        ts.SGGiaBia = reader.GetInt32(3);
                         ts.SGNamXB = reader.GetInt32(4);
                         ts.SGImage = reader.GetString(5);
                         ts.SGMoTa = reader.GetString(6);
                         ts.SGTrangThai = reader.GetBoolean(7);
                         ts.SGMaTacGia = reader.GetString(8);
+                        ts.SGGiaBia = reader.GetInt32(9);
                         list.Add(ts);
                     }
                     return list;
@@ -87,11 +89,13 @@ namespace DAO
                         ts.SGTenTuaSach = reader.GetString(1);
                         ts.SGMaNXB = reader.GetString(2);
                         ts.SGSoLuong = reader.GetInt32(3);
+                        ts.SGGiaBia = reader.GetInt32(3);
                         ts.SGNamXB = reader.GetInt32(4);
                         ts.SGImage = reader.GetString(5);
                         ts.SGMoTa = reader.GetString(6);
                         ts.SGTrangThai = reader.GetBoolean(7);
                         ts.SGMaTacGia = reader.GetString(8);
+                        ts.SGGiaBia = reader.GetInt32(9);
                     }
                 }
                 catch (Exception ex)
@@ -128,17 +132,19 @@ namespace DAO
             using (SqlConnection connection = DataBaseConnection.Connect())
             {
                 connection.Open();
-                string insertQuery = "INSERT INTO TuaSach(MaTuaSach,TenTuaSach,MaNXB,SoLuong,NamXB,Image,Mota,TrangThai,MaTacGia) values (@MaTuaSach,@TenTuaSach,@MaNXB,@SoLuong,@NamXB,@Image,@Mota,@TrangThai,@MaTacGia)";
+                string insertQuery = "INSERT INTO TuaSach(MaTuaSach,TenTuaSach,MaNXB,SoLuong,NamXB,Image,Mota,TrangThai,MaTacGia,GiaBia) values (@MaTuaSach,@TenTuaSach,@MaNXB,@SoLuong,@NamXB,@Image,@Mota,@TrangThai,@MaTacGia,@GiaBia)";
                 SqlCommand command = new SqlCommand(insertQuery, connection);
                 command.Parameters.AddWithValue("@MaTuaSach", ts.SGMaTuaSach);
                 command.Parameters.AddWithValue("@TenTuaSach",ts.SGTenTuaSach);
                 command.Parameters.AddWithValue("@MaNXB", ts.SGMaNXB);
                 command.Parameters.AddWithValue("@SoLuong", ts.SGSoLuong);
+                command.Parameters.AddWithValue("@GiaBia", ts.SGGiaBia);
                 command.Parameters.AddWithValue("@NamXB", ts.SGNamXB);
                 command.Parameters.AddWithValue("@Image", ts.SGImage);
                 command.Parameters.AddWithValue("@Mota", ts.SGMoTa);
                 command.Parameters.AddWithValue("@TrangThai", ts.SGTrangThai);
                 command.Parameters.AddWithValue("@MaTacGia", ts.SGMaTacGia);
+                command.Parameters.AddWithValue("@GiaBia", ts.SGGiaBia);
                 rowAffected = command.ExecuteNonQuery();
                 connection.Close();
             }
@@ -152,7 +158,7 @@ namespace DAO
             using (SqlConnection connection = DataBaseConnection.Connect())
             {
                 connection.Open();
-                string insertQuery = "UPDATE TUASACH SET TenTuaSach = @TenTuaSach, MaNXB = @MaNXB, SoLuong = @Soluong, NamXB = @NamXB, Image = @Image, Mota = @Mota,TrangThai = @TrangThai, MaTacGia = @MaTacGia WHERE MaTuaSach = @MaTuaSach";
+                string insertQuery = "UPDATE TUASACH SET TenTuaSach = @TenTuaSach, MaNXB = @MaNXB, SoLuong = @Soluong, NamXB = @NamXB, Image = @Image, Mota = @Mota,TrangThai = @TrangThai, MaTacGia = @MaTacGia,GiaBia=@GiaBia WHERE MaTuaSach = @MaTuaSach";
                 SqlCommand command = new SqlCommand(insertQuery, connection);
                 command.Parameters.AddWithValue("@MaTuaSach", ts.SGMaTuaSach);
                 command.Parameters.AddWithValue("@TenTuaSach", ts.SGTenTuaSach);
@@ -163,6 +169,7 @@ namespace DAO
                 command.Parameters.AddWithValue("@Mota", ts.SGMoTa);
                 command.Parameters.AddWithValue("@TrangThai", ts.SGTrangThai);
                 command.Parameters.AddWithValue("@MaTacGia", ts.SGMaTacGia);
+                command.Parameters.AddWithValue("@GiaBia", ts.SGGiaBia);
                 rowAffected = command.ExecuteNonQuery();
             }
             return rowAffected;

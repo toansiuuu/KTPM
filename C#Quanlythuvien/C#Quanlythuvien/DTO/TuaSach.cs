@@ -17,13 +17,14 @@ namespace DTO
         private String MoTa;
         private String MaTacGia;
         private Boolean TrangThai;
+        private int GiaBia;
 
         public TuaSach()
         {
 
         }
 
-        public TuaSach(string maTuaSach, string tenTuaSach, string maNXB, int soLuong, int namXB, string image, string moTa, string maTacGia, bool trangThai)
+        public TuaSach(string maTuaSach, string tenTuaSach, string maNXB, int soLuong, int namXB, string image, string moTa, string maTacGia, bool trangThai, int giaBia)
         {
             MaTuaSach = maTuaSach;
             TenTuaSach = tenTuaSach;
@@ -34,6 +35,7 @@ namespace DTO
             MoTa = moTa;
             MaTacGia = maTacGia;
             TrangThai = trangThai;
+            GiaBia = giaBia;
         }
 
         public string SGMaTuaSach { get => MaTuaSach; set => MaTuaSach = value; }
@@ -45,6 +47,7 @@ namespace DTO
         public string SGMoTa { get => MoTa; set => MoTa = value; }
         public string SGMaTacGia { get => MaTacGia; set => MaTacGia = value; }
         public bool SGTrangThai { get => TrangThai; set => TrangThai = value; }
-        
+        public int SGGiaBia { get => GiaBia; set => GiaBia = value; }
+
     }
 }
