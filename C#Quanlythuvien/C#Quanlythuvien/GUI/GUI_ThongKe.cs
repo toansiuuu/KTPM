@@ -40,6 +40,7 @@ namespace GUI
         static void ExportToExcel(List<PhieuNhap> listPN, string filePath)
         {
             // Tạo một gói Excel
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             using (var package = new ExcelPackage())
             {
                 // Tạo một trang tính mới
