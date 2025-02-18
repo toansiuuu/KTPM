@@ -137,7 +137,6 @@
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(171, 30);
             this.txt_diachi.TabIndex = 58;
-            this.txt_diachi.TextChanged += new System.EventHandler(this.txt_diachi_TextChanged);
             // 
             // dp_ngaysinh
             // 
