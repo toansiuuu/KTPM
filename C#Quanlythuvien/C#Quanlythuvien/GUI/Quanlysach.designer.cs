@@ -161,16 +161,17 @@
             this.txtGiaBia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBia.Location = new System.Drawing.Point(114, 13);
             this.txtGiaBia.Name = "txtGiaBia";
-            this.txtGiaBia.ReadOnly = true;
+            this.txtGiaBia.ReadOnly = false;
             this.txtGiaBia.Size = new System.Drawing.Size(161, 23);
             this.txtGiaBia.TabIndex = 1;
+          
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(3, 10);
-            this.label9.Name = "label9";
+            this.label9.Name = "lblGiaBia";
             this.label9.Size = new System.Drawing.Size(75, 25);
             this.label9.TabIndex = 0;
             this.label9.Text = "Giá Bìa";
@@ -600,7 +601,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(293, 39);
             this.panel5.TabIndex = 4;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel6
             // 
@@ -726,7 +726,7 @@
             this.tableSach.Size = new System.Drawing.Size(1410, 464);
             this.tableSach.TabIndex = 2;
             this.tableSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableSach_CellClick);
-              // 
+            // 
             // maSach
             // 
             this.maSach.HeaderText = "Mã sách";

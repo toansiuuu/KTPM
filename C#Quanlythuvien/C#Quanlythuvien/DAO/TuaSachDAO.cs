@@ -138,7 +138,6 @@ namespace DAO
                 command.Parameters.AddWithValue("@TenTuaSach",ts.SGTenTuaSach);
                 command.Parameters.AddWithValue("@MaNXB", ts.SGMaNXB);
                 command.Parameters.AddWithValue("@SoLuong", ts.SGSoLuong);
-                command.Parameters.AddWithValue("@GiaBia", ts.SGGiaBia);
                 command.Parameters.AddWithValue("@NamXB", ts.SGNamXB);
                 command.Parameters.AddWithValue("@Image", ts.SGImage);
                 command.Parameters.AddWithValue("@Mota", ts.SGMoTa);

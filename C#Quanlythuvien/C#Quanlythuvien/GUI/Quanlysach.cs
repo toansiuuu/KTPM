@@ -362,8 +362,12 @@ namespace GUI
                 MessageBox.Show("Nhập năm sai định dạng");
                 return false;
             }
+            if (!IsInteger(txtGiaBia.Text)){
+                MessageBox.Show("Nhập sai định dạng giá");
+                return false;
+            }
            
-            if (txtTheloai.Text == "" || txtSoluong.Text == "" || txtNamXB.Text == "" || txtTenSach.Text == "")
+            if (txtTheloai.Text == "" || txtSoluong.Text == "" || txtNamXB.Text == "" || txtTenSach.Text == ""|| txtGiaBia.Text=="")
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin");
                 return false;
@@ -376,7 +380,7 @@ namespace GUI
             bool flag = false;
             if (cbNxb.SelectedIndex == -1 || txtTenSach.Text.Trim().Equals("") 
             || txtNamXB.Text.Trim().Equals("") || cbTacGia.SelectedIndex == -1 ||
-            txtTheloai.Text.Trim().Equals(""))
+            txtTheloai.Text.Trim().Equals("")|| txtGiaBia.Text.Trim().Equals(""))
             {
                 flag = true;
             }
@@ -398,10 +402,19 @@ namespace GUI
                     {
                         String sourcePath = duongdananh;
                         String destinationPath = getPath();
-                        if (sourcePath != destinationPath)
+                        if (!string.IsNullOrEmpty(sourcePath) && !string.IsNullOrEmpty(destinationPath))
                         {
-                            File.Copy(sourcePath, destinationPath, true);
+                            if (File.Exists(sourcePath)) // Kiểm tra xem file nguồn có tồn tại không
+                            {
+                                File.Copy(sourcePath, destinationPath, true);
+                            }
+                            else
+                            {
+                                MessageBox.Show("File nguồn không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
+                       
+
 
                         foreach (String x in lstl)
                         {
@@ -721,11 +734,8 @@ namespace GUI
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
        
+
+      
     }
 }
