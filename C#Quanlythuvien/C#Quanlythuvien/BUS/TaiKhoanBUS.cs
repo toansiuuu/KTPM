@@ -1,4 +1,4 @@
-﻿using DAO;
+using DAO;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -36,6 +36,10 @@ namespace BUS
         public NhanVienDTO getInFoNVByMa(String maNV)
         {
             return tkDAO.getInFoNVByMa(maNV);
+        }
+        public bool KiemTraTenDangNhap(string tenDangNhap)
+        {
+            return tkDAO.KiemTraTenDangNhap(tenDangNhap);
         }
     }
 }
