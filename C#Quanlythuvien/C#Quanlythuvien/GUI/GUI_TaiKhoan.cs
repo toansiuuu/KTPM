@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using BUS;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +42,7 @@ namespace GUI
             cb_taikhoan.SelectedIndex = 0;
             cb_ChucVu.DropDownStyle = ComboBoxStyle.DropDownList;
             cb_ChucVu.SelectedIndex = 0;
+            // MessageBox.Show("Quyền được truyền vào: " + chiTiet);
             SetUpAccessPermissions(chiTiet);
         }
         public void SetUpAccessPermissions(String chiTiet)
@@ -51,17 +52,51 @@ namespace GUI
                 bttn_gan.Visible = false;
                 bttn_khoa.Visible = false;
                 bttn_mo.Visible = false;
+                bttn_capTK.Visible = false;
             }
             else
             {
-                if (!chiTiet.Contains("Sửa"))
+                // Gán quyền
+                if (chiTiet.Contains("Gan"))
                 {
-                    bttn_khoa.Visible = false;
-                    bttn_mo.Visible = false;
+                    bttn_gan.Visible = true;
                 }
-                if (!chiTiet.Contains("Gán"))
+                else 
                 {
                     bttn_gan.Visible = false;
+                }
+
+                // Khóa
+                if (chiTiet.Contains("Khoa"))
+                {
+                    bttn_khoa.Visible = true;
+                }
+                else
+                {
+                    bttn_khoa.Visible = false;
+                }
+
+                // Mở
+                if (chiTiet.Contains("Mo"))
+                {
+                    bttn_mo.Visible = true;
+                }
+                else
+                {
+                    bttn_mo.Visible = false;
+                }
+
+                // Cấp
+                if (chiTiet.Contains("Cap"))
+                {
+                    bttn_capTK.Visible = true;
+                    bttn_capTK.Location = new System.Drawing.Point(20, 150);
+                    bttn_capTK.Size = new System.Drawing.Size(120, 40);
+                    bttn_capTK.Text = "Cấp MK";
+                }
+                else
+                {
+                    bttn_capTK.Visible = false;
                 }
             }
         }
@@ -372,6 +407,27 @@ namespace GUI
         public void FormCon_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadTK();
+        }
+
+        private void bttn_capTK_Click(object sender, EventArgs e)
+        {
+            if (lsTK.SelectedItems.Count > 0)
+            {
+                if (!lsTK.SelectedItems[0].SubItems[3].Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Nhân viên đã có tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                string maNV = lsTK.SelectedItems[0].SubItems[0].Text;
+                frmCapTaiKhoan form = new frmCapTaiKhoan(maNV);
+                form.FormClosed += FormCon_FormClosed;
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần cấp tài khoản và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
