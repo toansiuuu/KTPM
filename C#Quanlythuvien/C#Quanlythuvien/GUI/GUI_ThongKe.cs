@@ -491,6 +491,8 @@ namespace GUI
         }
         static void ExportToExcel2(List<PhieuTra> listPN, string filePath)
         {
+
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             // Tạo một gói Excel
             using (var package = new ExcelPackage())
             {
