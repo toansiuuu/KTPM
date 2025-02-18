@@ -25,6 +25,7 @@ namespace GUI
             this.Text = string.Empty;
             listTK = tkBUS.getALLTaiKhoan();
             listNV = nvBUS.getAllNhanVien();
+            txtPass.TextChanged += new EventHandler(txtPass_TextChanged);
         }
         private void txtUsername_Leave(object sender, EventArgs e)
         {
@@ -59,8 +60,20 @@ namespace GUI
             panel6.BackColor = Color.FromArgb(131, 117, 220);
             if (txtPass.Text == "Password")
             {
-                txtPass.PasswordChar = '●';
                 txtPass.Text = "";
+            }
+            txtPass.PasswordChar = '●';
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPass.Text != "Password")
+            {
+                txtPass.PasswordChar = '●';
+            }
+            else
+            {
+                txtPass.PasswordChar = '\0';
             }
         }
 

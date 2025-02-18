@@ -357,7 +357,7 @@ namespace GUI
                 return;
             }
             
-            MessageBox.Show("Thành Cônng!");
+            MessageBox.Show("Thành Công!");
             setNull();
         }
         public void setNull()

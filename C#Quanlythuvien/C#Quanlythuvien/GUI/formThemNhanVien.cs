@@ -179,40 +179,6 @@ namespace GUI
             nv.Sdt=sdt;
             return nv;
         }
-        public bool checkValidForm() {
-           if(txt_ten.Text.Trim().Length==0 || txt_diachi.Text.Trim().Length==0 || /*txt_chucvu.Text.Trim().Length == 0 ||*/ txt_sdt.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập đầy đủ","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            if (!IsOnlyLetters(txt_ten.Text))
-            {
-                MessageBox.Show("Tên chỉ được chứa chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (!IsOnlyDigits(txt_sdt.Text)){
-                MessageBox.Show("SDT chỉ được chứa số và phải đủ 10 số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            /*
-            if (!IsRoleValid(txt_chucvu.Text))
-            {
-                MessageBox.Show("Phải là 1 trong 4:Nhân viên,Quản lý, Thử thư, Quản lý kho ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            */
-
-            if (!checkNgaySinh(dp_ngaysinh.Value))
-            {
-                MessageBox.Show("Tuổi của NV không chính xác. Tuổi không thể <18", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-
-            return true;
-            
-        }
         static bool IsOnlyLetters(string str)
         {
             string pattern = "^[A-Za-zÀ-ỹ ]*$";
@@ -234,7 +200,44 @@ namespace GUI
             }
             return true;
         }
-       
+        static bool IsValidAddress(string address)
+        {
+            // Kiểm tra địa chỉ phải chứa cả chữ và số
+            bool hasLetter = address.Any(char.IsLetter);
+            bool hasNumber = address.Any(char.IsDigit);
+            return hasLetter && hasNumber;
+        }
+        public bool checkValidForm() {
+            if(txt_ten.Text.Trim().Length==0 || txt_diachi.Text.Trim().Length==0 || txt_sdt.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Bạn chưa nhập đầy đủ","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!IsOnlyLetters(txt_ten.Text))
+            {
+                MessageBox.Show("Tên chỉ được chứa chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!IsValidAddress(txt_diachi.Text.Trim()))
+            {
+                MessageBox.Show("Địa chỉ phải bao gồm cả chữ và số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!IsOnlyDigits(txt_sdt.Text)){
+                MessageBox.Show("SDT chỉ được chứa số và phải đủ 10 số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!checkNgaySinh(dp_ngaysinh.Value))
+            {
+                MessageBox.Show("Tuổi của NV không chính xác. Tuổi không thể <18", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
         public bool checkNgaySinh(DateTime ngaySinh)
         {
             DateTime today = DateTime.Today;

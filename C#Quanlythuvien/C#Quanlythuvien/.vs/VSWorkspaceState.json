@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI\\bin",
-    "\\GUI\\obj"
+    "\\GUI"
   ],
-  "SelectedNode": "\\C#Quanlythuvien.sln",
+  "SelectedNode": "\\GUI\\frmThemTS_PN.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -75,3 +75,14 @@ C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanl
 C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.dll
 C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.pdb
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\bin\Debug\BUS.dll
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\bin\Debug\BUS.pdb
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\bin\Debug\DAO.dll
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\bin\Debug\DTO.dll
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\bin\Debug\DAO.pdb
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\bin\Debug\DTO.pdb
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.dll
+D:\Coding\Demo-KTPM\C#Quanlythuvien\C#Quanlythuvien\BUS\obj\Debug\BUS.pdb

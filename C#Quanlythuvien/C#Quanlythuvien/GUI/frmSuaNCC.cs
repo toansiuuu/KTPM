@@ -68,6 +68,13 @@ namespace GUI
             Regex regex = new Regex(pattern);
             return regex.IsMatch(input);
         }
+        public bool ValidateAddress(string address)
+        {
+            // Kiểm tra địa chỉ phải chứa cả chữ và số
+            bool hasLetter = address.Any(char.IsLetter);
+            bool hasNumber = address.Any(char.IsDigit);
+            return hasLetter && hasNumber;
+        }
 
         private void bttn_hoanthanh_Click(object sender, EventArgs e)
         {
@@ -78,7 +85,12 @@ namespace GUI
             }
             if (tb_diachi.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Địa Chỉ Không Đúng Định Dạng!");
+                MessageBox.Show("Địa Chỉ Không Được Để Trống!");
+                return;
+            }
+            if (!ValidateAddress(tb_diachi.Text.Trim()))
+            {
+                MessageBox.Show("Địa Chỉ Phải Bao Gồm Cả Chữ Và Số!");
                 return;
             }
             if (!ValidateEmail(tb_Email.Text))

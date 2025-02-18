@@ -34,6 +34,7 @@ namespace GUI
                 rd_nu.Checked = true;
             }
             dp_ngaysinh.Value = nhanVien.NgaySinh;
+            dp_ngaysinh.Enabled = false;
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string projectDirectory = Directory.GetParent(baseDirectory).Parent.FullName;
             string projectDirectory2 = Directory.GetParent(projectDirectory).Parent.FullName;

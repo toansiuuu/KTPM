@@ -209,7 +209,7 @@ namespace GUI
         }
         public bool checkValidForm()
         {
-            if (txt_ten.Text.Trim().Length == 0 || txt_diachi.Text.Trim().Length == 0 ||/* txt_chucvu.Text.Trim().Length == 0 ||*/ txt_sdt.Text.Trim().Length == 0)
+            if (txt_ten.Text.Trim().Length == 0 || txt_diachi.Text.Trim().Length == 0 || txt_sdt.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn chưa nhập đầy đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -217,6 +217,12 @@ namespace GUI
             if (!IsOnlyLetters(txt_ten.Text))
             {
                 MessageBox.Show("Tên chỉ được chứa chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!IsValidAddress(txt_diachi.Text.Trim()))
+            {
+                MessageBox.Show("Địa chỉ phải bao gồm cả chữ và số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -279,6 +285,13 @@ namespace GUI
             string projectDirectory2 = Directory.GetParent(projectDirectory).Parent.FullName;
             string imagePath = Path.Combine(projectDirectory2, "Image", "NhanVien", path_anh);
             return imagePath;
+        }
+        static bool IsValidAddress(string address)
+        {
+            // Kiểm tra địa chỉ phải chứa cả chữ và số
+            bool hasLetter = address.Any(char.IsLetter);
+            bool hasNumber = address.Any(char.IsDigit);
+            return hasLetter && hasNumber;
         }
     }
 }

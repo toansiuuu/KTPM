@@ -11,7 +11,7 @@ namespace DTO
     {
         public static SqlConnection Connect()
         {
-            string strconn = "Data Source=TOANMINH\\SQLEXPRESS;Initial Catalog=QuanLyThuVien;User ID=sa;Password=12345678;";
+            string strconn = "Data Source=NGOCTUAN;Initial Catalog=QuanLyThuVien;Integrated Security=True;";
             SqlConnection conn = new SqlConnection(strconn);
             return conn;
         }

@@ -146,7 +146,7 @@
             this.lblTrietKhau.Name = "lblTrietKhau";
             this.lblTrietKhau.Size = new System.Drawing.Size(99, 25);
             this.lblTrietKhau.TabIndex = 10;
-            this.lblTrietKhau.Text = "Triết khấu";
+            this.lblTrietKhau.Text = "Chiết khấu";
             // 
             // txtTrietKhau
             // 
