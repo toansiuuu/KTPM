@@ -280,5 +280,7 @@ namespace GUI
             string imagePath = Path.Combine(projectDirectory2, "Image", "NhanVien", path_anh);
             return imagePath;
         }
+
+        
     }
 }

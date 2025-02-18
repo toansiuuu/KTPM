@@ -116,7 +116,6 @@
             this.txt_donGia.Name = "txt_donGia";
             this.txt_donGia.Size = new System.Drawing.Size(211, 30);
             this.txt_donGia.TabIndex = 7;
-            this.txt_donGia.TextChanged += new System.EventHandler(this.txt_donGia_TextChanged);
             // 
             // btn_them
             // 
@@ -143,10 +142,10 @@
             this.lblTrietKhau.AutoSize = true;
             this.lblTrietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrietKhau.Location = new System.Drawing.Point(33, 224);
-            this.lblTrietKhau.Name = "lblTrietKhau";
+            this.lblTrietKhau.Name = "lblChietKhau";
             this.lblTrietKhau.Size = new System.Drawing.Size(99, 25);
             this.lblTrietKhau.TabIndex = 10;
-            this.lblTrietKhau.Text = "Triết khấu";
+            this.lblTrietKhau.Text = "Chiết khấu";
             // 
             // txtTrietKhau
             // 

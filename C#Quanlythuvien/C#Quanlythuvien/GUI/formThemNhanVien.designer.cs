@@ -137,6 +137,7 @@
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(171, 30);
             this.txt_diachi.TabIndex = 58;
+            this.txt_diachi.TextChanged += new System.EventHandler(this.txt_diachi_TextChanged);
             // 
             // dp_ngaysinh
             // 
@@ -241,7 +242,7 @@
             // btn_them
             // 
             this.btn_them.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_them.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.ForeColor = System.Drawing.Color.White;
             this.btn_them.Location = new System.Drawing.Point(513, 391);
             this.btn_them.Name = "btn_them";

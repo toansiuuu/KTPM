@@ -269,7 +269,7 @@ namespace GUI
             // btn_CapNhat
             // 
             this.btn_CapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_CapNhat.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CapNhat.ForeColor = System.Drawing.Color.White;
             this.btn_CapNhat.Location = new System.Drawing.Point(501, 374);
             this.btn_CapNhat.Name = "btn_CapNhat";
