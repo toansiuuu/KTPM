@@ -38,8 +38,8 @@
             this.txt_donGia = new System.Windows.Forms.TextBox();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
-            this.lblTrietKhau = new System.Windows.Forms.Label();
-            this.txtTrietKhau = new System.Windows.Forms.TextBox();
+            this.lblchietKhau = new System.Windows.Forms.Label();
+            this.txt_chietKhau = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -114,6 +114,7 @@
             this.txt_donGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_donGia.Location = new System.Drawing.Point(194, 169);
             this.txt_donGia.Name = "txt_donGia";
+            this.txt_donGia.ReadOnly = true;
             this.txt_donGia.Size = new System.Drawing.Size(211, 30);
             this.txt_donGia.TabIndex = 7;
             // 
@@ -139,28 +140,28 @@
             // 
             // lblTrietKhau
             // 
-            this.lblTrietKhau.AutoSize = true;
-            this.lblTrietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrietKhau.Location = new System.Drawing.Point(33, 224);
-            this.lblTrietKhau.Name = "lblChietKhau";
-            this.lblTrietKhau.Size = new System.Drawing.Size(99, 25);
-            this.lblTrietKhau.TabIndex = 10;
-            this.lblTrietKhau.Text = "Chiết khấu";
+            this.lblchietKhau.AutoSize = true;
+            this.lblchietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblchietKhau.Location = new System.Drawing.Point(33, 224);
+            this.lblchietKhau.Name = "lblchietKhau";
+            this.lblchietKhau.Size = new System.Drawing.Size(106, 25);
+            this.lblchietKhau.TabIndex = 10;
+            this.lblchietKhau.Text = "Chiết khấu";
             // 
-            // txtTrietKhau
+            // txt_chietKhau
             // 
-            this.txtTrietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrietKhau.Location = new System.Drawing.Point(194, 219);
-            this.txtTrietKhau.Name = "txtTrietKhau";
-            this.txtTrietKhau.Size = new System.Drawing.Size(211, 30);
-            this.txtTrietKhau.TabIndex = 11;
+            this.txt_chietKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_chietKhau.Location = new System.Drawing.Point(194, 219);
+            this.txt_chietKhau.Name = "txt_chietKhau";
+            this.txt_chietKhau.Size = new System.Drawing.Size(211, 30);
+            this.txt_chietKhau.TabIndex = 11;
             // 
             // frmThemTS_PN
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(435, 342);
-            this.Controls.Add(this.txtTrietKhau);
-            this.Controls.Add(this.lblTrietKhau);
+            this.Controls.Add(this.txt_chietKhau);
+            this.Controls.Add(this.lblchietKhau);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.txt_donGia);
@@ -192,7 +193,7 @@
         private System.Windows.Forms.TextBox txt_donGia;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_thoat;
-        private System.Windows.Forms.Label lblTrietKhau;
-        private System.Windows.Forms.TextBox txtTrietKhau;
+        private System.Windows.Forms.Label lblchietKhau;
+        private System.Windows.Forms.TextBox txt_chietKhau;
     }
 }

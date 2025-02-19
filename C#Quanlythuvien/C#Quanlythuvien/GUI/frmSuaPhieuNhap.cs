@@ -105,7 +105,7 @@ namespace GUI
         {
             executeTimKiem();
         }
-        public delegate void sendData(string ma, string ten);
+        public delegate void sendData(string ma, string ten,int gia);
         public sendData sendDataed;
         private void button7_Click(object sender, EventArgs e)
         {
@@ -117,9 +117,10 @@ namespace GUI
                 // Thực hiện các hành động với dòng đã chọn
                 string firstColumnValue = selectedRow.SubItems[0].Text;
                 string secondColumnValue = selectedRow.SubItems[1].Text;
+                int thirdColumnValue = int.Parse(selectedRow.SubItems[3].Text);
                 frmThemTS_PN frmThem = new frmThemTS_PN();
                 this.sendDataed += new sendData(frmThem.setThongTin);
-                sendDataed(firstColumnValue, secondColumnValue);
+                sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue);
                 frmThem.sendCTPn_ED += loadChiTietPhieuNhap;
                 frmThem.ShowDialog();
 

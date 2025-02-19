@@ -17,10 +17,11 @@ namespace GUI
         {
             InitializeComponent();
         }
-        public  void setThongTin(string maSach,string tenSach)
+        public  void setThongTin(string maSach,string tenSach,int giaBia)
         {
             txt_maSach.Text = maSach;
             txt_tenSach.Text = tenSach;
+            txt_donGia.Text= giaBia.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,12 +59,13 @@ namespace GUI
                 ctpn.SGMaTuaSach = txt_maSach.Text;
                 ctpn.SGSoLuong = int.Parse(txt_soLuong.Text);
                 ctpn.SGDonGia= float.Parse(txt_donGia.Text);
+                ctpn.SGChietKhau = int.Parse(txt_chietKhau.Text);
                 sendCTPn_ED(ctpn);
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Số lượng hoặc đơn giá không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Số lượng hoặc chiết khấu không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private bool IsNumericAndGreaterThanZero(string input)
@@ -79,16 +81,28 @@ namespace GUI
                 return false;
             }
         }
+        private bool IsPercentageValid(string input)
+        {
+            if (double.TryParse(input, out double number))
+            {
+                // Kiểm tra xem số có nằm trong khoảng từ 1 đến 100 không
+                return number >= 1 && number <= 100;
+            }
+            else
+            {
+                // Chuỗi không hợp lệ hoặc không phải số
+                return false;
+            }
+        }
+
         public bool checkValidateForm() {
-            if (!IsNumericAndGreaterThanZero(txt_soLuong.Text) || !IsNumericAndGreaterThanZero(txt_donGia.Text))
+            if (!IsNumericAndGreaterThanZero(txt_soLuong.Text) || !IsPercentageValid(txt_chietKhau.Text))
             {
                 return false;
             }
 
                 return true;
             }
-
-        
 
         
     }
