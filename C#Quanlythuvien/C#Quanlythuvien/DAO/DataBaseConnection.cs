@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace DTO
     {
         public static SqlConnection Connect()
         {
-            string strconn = "Data Source=TOANMINH\\SQLEXPRESS;Initial Catalog=QLTV;User ID=sa;Password=12345678;";
+            string strconn = "Data Source=localhost;Initial Catalog=QLTV;Integrated Security=True;";
             SqlConnection conn = new SqlConnection(strconn);
             return conn;
         }
