@@ -220,31 +220,21 @@ namespace GUI
         }
         static bool IsOnlyDigits(string str)
         {
-            // Kiểm tra độ dài phải đúng 10 chữ số
             if (str.Length != 10)
             {
                 return false;
             }
-
-            // Kiểm tra ký tự đầu tiên có phải là '0' không
-            if (str[0] != '0')
+            foreach (char c in str)
             {
-                return false;
-            }
-
-            // Kiểm tra tất cả các ký tự có phải là chữ số hay không
-            for (int i = 1; i < str.Length; i++)  // Bắt đầu từ index 1 vì đã kiểm tra ký tự đầu
-            {
-                if (!char.IsDigit(str[i]))
+                
+                if (!char.IsDigit(c))
                 {
                     return false;
                 }
             }
-
             return true;
         }
-
-
+       
         public bool checkNgaySinh(DateTime ngaySinh)
         {
             DateTime today = DateTime.Today;
@@ -257,7 +247,5 @@ namespace GUI
 
             return true;
         }
-
-        
     }
 }

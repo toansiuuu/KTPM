@@ -62,7 +62,6 @@ namespace GUI
                 item.Text = ts.SGMaTuaSach; 
                 item.SubItems.Add(ts.SGTenTuaSach); 
                 item.SubItems.Add(ts.SGSoLuong.ToString());
-                item.SubItems.Add(ts.SGGiaBia.ToString());
                 listView2.Items.Add(item);
             }
         }
@@ -86,18 +85,16 @@ namespace GUI
 
         private void GUI_NhapHang_Load(object sender, EventArgs e)
         {
-            listView2.Columns[0].Width = (int)(listView2.Width /4);
-            listView2.Columns[1].Width = (int)(listView2.Width /4);
-            listView2.Columns[2].Width = (int)(listView2.Width /4);
-            listView2.Columns[3].Width = (int)(listView2.Width / 4);
+            listView2.Columns[0].Width = (int)(listView2.Width /3);
+            listView2.Columns[1].Width = (int)(listView2.Width /3);
+            listView2.Columns[2].Width = (int)(listView2.Width /3);
             listView2.View = View.Details;
             listView2.GridLines = true;
             listView2.FullRowSelect = true;
 
-            listView1.Columns[0].Width = (int)(listView1.Width / 4);
-            listView1.Columns[1].Width = (int)(listView1.Width / 4);
-            listView1.Columns[2].Width = (int)(listView1.Width / 4);
-            listView1.Columns[3].Width = (int)(listView1.Width / 4);
+            listView1.Columns[0].Width = (int)(listView1.Width / 3);
+            listView1.Columns[1].Width = (int)(listView1.Width / 3);
+            listView1.Columns[2].Width = (int)(listView1.Width / 3);
             listView1.View = View.Details;
             listView1.GridLines = true;
             listView1.FullRowSelect = true;
@@ -112,11 +109,10 @@ namespace GUI
             lv_phieuNhap.GridLines = true;
             lv_phieuNhap.FullRowSelect = true;
 
-            lv_chiTietPN.Columns[0].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN.Columns[1].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN.Columns[2].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN.Columns[3].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN.Columns[4].Width = (int)(lv_chiTietPN.Width / 5);
+            lv_chiTietPN.Columns[0].Width = (int)(lv_chiTietPN.Width / 4);
+            lv_chiTietPN.Columns[1].Width = (int)(lv_chiTietPN.Width / 4);
+            lv_chiTietPN.Columns[2].Width = (int)(lv_chiTietPN.Width / 4);
+            lv_chiTietPN.Columns[3].Width = (int)(lv_chiTietPN.Width / 4);
 
             lv_chiTietPN.GridLines = true;
             lv_chiTietPN.FullRowSelect=true;
@@ -131,11 +127,10 @@ namespace GUI
             lv_phieuNhap3.GridLines = true;
             lv_phieuNhap3.FullRowSelect = true;
 
-            lv_chiTietPN3.Columns[0].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN3.Columns[1].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN3.Columns[2].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN3.Columns[3].Width = (int)(lv_chiTietPN.Width / 5);
-            lv_chiTietPN3.Columns[4].Width = (int)(lv_chiTietPN.Width / 5);
+            lv_chiTietPN3.Columns[0].Width = (int)(lv_chiTietPN.Width / 4);
+            lv_chiTietPN3.Columns[1].Width = (int)(lv_chiTietPN.Width / 4);
+            lv_chiTietPN3.Columns[2].Width = (int)(lv_chiTietPN.Width / 4);
+            lv_chiTietPN3.Columns[3].Width = (int)(lv_chiTietPN.Width / 4);
 
             lv_chiTietPN3.GridLines = true;
             lv_chiTietPN3.FullRowSelect = true;
@@ -145,8 +140,6 @@ namespace GUI
             loadPhieuNhap(lv_phieuNhap3, pnBUS.getAllPhieuNhap());
 
         }
-        //
-
         // lay data load len table phieu nhap
         public void loadPhieuNhap(List<PhieuNhap> list)
         {
@@ -218,7 +211,6 @@ namespace GUI
                 ctpnItem.SGMaTuaSach = item.SubItems[0].Text;
                 ctpnItem.SGSoLuong = int.Parse(item.SubItems[1].Text);
                 ctpnItem.SGDonGia = float.Parse(item.SubItems[2].Text);
-                ctpnItem.SGChietKhau = int.Parse(item.SubItems[3].Text);
                 ctpn.Add(ctpnItem);
                 
             }
@@ -300,7 +292,7 @@ namespace GUI
         {
 
         }
-        public delegate void sendData(string ma, string ten,int gia);
+        public delegate void sendData(string ma, string ten);
         public sendData sendDataed;
         private void button7_Click(object sender, EventArgs e)
         {
@@ -312,10 +304,9 @@ namespace GUI
                 // Thực hiện các hành động với dòng đã chọn
                 string firstColumnValue = selectedRow.SubItems[0].Text;
                 string secondColumnValue = selectedRow.SubItems[1].Text;
-                int thirdColumnValue = Convert.ToInt32(selectedRow.SubItems[3].Text);
                 frmThemTS_PN frmThem = new frmThemTS_PN();
                 this.sendDataed += new sendData(frmThem.setThongTin);
-                sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue);
+                sendDataed(firstColumnValue, secondColumnValue);
                 frmThem.sendCTPn_ED += loadChiTietPhieuNhap;
                 frmThem.ShowDialog();
                 
@@ -346,7 +337,6 @@ namespace GUI
                 item.Text = ctpn.SGMaTuaSach; // Thiết lập giá trị cho cột chính (cột 0)
                 item.SubItems.Add(ctpn.SGSoLuong.ToString()); // Cột 1
                 item.SubItems.Add(ctpn.SGDonGia.ToString()); // Cột 3
-                item.SubItems.Add(ctpn.SGChietKhau.ToString());
                 listView1.Items.Add(item);
                 capNhatGia();
             }
@@ -437,22 +427,13 @@ namespace GUI
         public void capNhatGia()
         {
             float sum = 0;
-            for (int i = 0; i < listView1.Items.Count; i++)
+            for(int i=0;i<listView1.Items.Count;i++)
             {
                 ListViewItem item = listView1.Items[i];
-
-                int soLuong = int.Parse(item.SubItems[1].Text);
-                float donGia = float.Parse(item.SubItems[2].Text);
-                int chietKhau = int.Parse(item.SubItems[3].Text);
-
-                // Tính thành tiền theo công thức: Số lượng * Đơn giá * (1 - Chiết khấu/100)
-                float thanhTien = soLuong * donGia * (1 - chietKhau / 100f);
-
-                sum += thanhTien;
+                sum += float.Parse(item.SubItems[2].Text) * int.Parse(item.SubItems[1].Text);    
             }
             txt_tongTIen.Text = sum.ToString();
         }
-
 
         private void txt_timKiem_TextChanged(object sender, EventArgs e)
         {
@@ -490,11 +471,9 @@ namespace GUI
                 item.SubItems.Add(ctpn.SGMaTuaSach); // Cột 1
                 item.SubItems.Add(ctpn.SGSoLuong.ToString()); // Cột 3
                 item.SubItems.Add(ctpn.SGDonGia.ToString()); // Cột 3
-                item.SubItems.Add(ctpn.SGChietKhau.ToString());
                 lv_chiTietPN.Items.Add(item);
             }
         }
-
         private void lv_phieuNhap_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lv_phieuNhap.SelectedItems.Count > 0)
@@ -616,9 +595,7 @@ namespace GUI
                 item.Text = ctpn.SGMaPhieuNhap; // Thiết lập giá trị cho cột chính (cột 0)
                 item.SubItems.Add(ctpn.SGMaTuaSach); // Cột 1
                 item.SubItems.Add(ctpn.SGSoLuong.ToString()); // Cột 3
-                item.SubItems.Add(ctpn.SGDonGia.ToString());
-                item.SubItems.Add(ctpn.SGChietKhau.ToString());
-                // Cột 3
+                item.SubItems.Add(ctpn.SGDonGia.ToString()); // Cột 3
                 lv.Items.Add(item);
             }
         }
@@ -794,7 +771,5 @@ namespace GUI
 
             }
         }
-
-        
     }
 }

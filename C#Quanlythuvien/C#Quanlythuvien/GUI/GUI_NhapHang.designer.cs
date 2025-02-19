@@ -39,7 +39,6 @@ namespace GUI
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button7 = new System.Windows.Forms.Button();
             this.cb_timKiem = new System.Windows.Forms.ComboBox();
             this.txt_timKiem = new System.Windows.Forms.TextBox();
@@ -104,9 +103,6 @@ namespace GUI
             this.button3 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.iconSplitButton1 = new FontAwesome.Sharp.IconSplitButton();
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -181,8 +177,7 @@ namespace GUI
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader27});
+            this.columnHeader6});
             this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(35, 134);
@@ -204,10 +199,6 @@ namespace GUI
             // columnHeader6
             // 
             this.columnHeader6.Text = "Số lượng";
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Giá Bìa";
             // 
             // button7
             // 
@@ -291,8 +282,7 @@ namespace GUI
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader28});
+            this.columnHeader9});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(20, 415);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -493,8 +483,7 @@ namespace GUI
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader29});
+            this.columnHeader16});
             this.lv_chiTietPN.HideSelection = false;
             this.lv_chiTietPN.Location = new System.Drawing.Point(8, 155);
             this.lv_chiTietPN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -667,8 +656,7 @@ namespace GUI
             this.columnHeader23,
             this.columnHeader24,
             this.columnHeader25,
-            this.columnHeader26,
-            this.columnHeader30});
+            this.columnHeader26});
             this.lv_chiTietPN3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_chiTietPN3.HideSelection = false;
             this.lv_chiTietPN3.Location = new System.Drawing.Point(31, 53);
@@ -837,18 +825,6 @@ namespace GUI
             this.iconSplitButton1.Size = new System.Drawing.Size(23, 23);
             this.iconSplitButton1.Text = "iconSplitButton1";
             // 
-            // columnHeader28
-            // 
-            this.columnHeader28.Text = "Chiết Khấu";
-            // 
-            // columnHeader29
-            // 
-            this.columnHeader29.Text = "Chiết Khấu";
-            // 
-            // columnHeader30
-            // 
-            this.columnHeader30.Text = "Chiết khấu";
-            // 
             // GUI_NhapHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -968,9 +944,5 @@ namespace GUI
         private ColumnHeader columnHeader24;
         private ColumnHeader columnHeader25;
         private ColumnHeader columnHeader26;
-        private ColumnHeader columnHeader27;
-        private ColumnHeader columnHeader28;
-        private ColumnHeader columnHeader29;
-        private ColumnHeader columnHeader30;
     }
 }

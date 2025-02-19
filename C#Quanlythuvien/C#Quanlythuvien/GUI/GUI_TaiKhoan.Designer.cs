@@ -1,4 +1,4 @@
-﻿namespace GUI
+﻿﻿namespace GUI
 {
     partial class GUI_TaiKhoan
     {
