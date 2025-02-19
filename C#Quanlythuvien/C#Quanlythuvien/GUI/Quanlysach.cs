@@ -344,36 +344,51 @@ namespace GUI
 
 
         private Boolean checkValidateThem()
-        {
-            NhaXuatBan nxb = nxb_BUS.getNhaXuatBanByID(cbNxb.SelectedItem.ToString());
-            TacGiaDTO tg = tg_BUS.getTacGiaByMa(cbTacGia.SelectedItem.ToString());
+{
+    NhaXuatBan nxb = nxb_BUS.getNhaXuatBanByID(cbNxb.SelectedItem.ToString());
+    TacGiaDTO tg = tg_BUS.getTacGiaByMa(cbTacGia.SelectedItem.ToString());
 
-            if (!nxb.SGTrangThai) {
-                MessageBox.Show("Nhà xuất bản ngừng hoạt động");
-                return false;
-            }
-            if (!tg.TinhTrang)
-            {
-                MessageBox.Show("Tác giả ngừng hoạt động");
-                return false;
-            }
-            if (!IsYearFormat(txtNamXB.Text))
-            {
-                MessageBox.Show("Nhập năm sai định dạng");
-                return false;
-            }
-            if (!IsInteger(txtGiaBia.Text)){
-                MessageBox.Show("Nhập sai định dạng giá");
-                return false;
-            }
-           
-            if (txtTheloai.Text == "" || txtSoluong.Text == "" || txtNamXB.Text == "" || txtTenSach.Text == ""|| txtGiaBia.Text=="")
-            {
-                MessageBox.Show("Vui lòng nhập đủ thông tin");
-                return false;
-            }
-            return true;
-        }
+    if (!nxb.SGTrangThai) {
+        MessageBox.Show("Nhà xuất bản ngừng hoạt động");
+        return false;
+    }
+    if (!tg.TinhTrang)
+    {
+        MessageBox.Show("Tác giả ngừng hoạt động");
+        return false;
+    }
+    if (!IsYearFormat(txtNamXB.Text))
+    {
+        MessageBox.Show("Nhập năm sai định dạng");
+        return false;
+    }
+    if (!IsInteger(txtGiaBia.Text)){
+        MessageBox.Show("Nhập sai định dạng giá");
+        return false;
+    }
+    
+    // Kiểm tra độ dài mô tả
+    if (txtMota.Text.Length < 5 || txtMota.Text.Length > 150)
+    {
+        MessageBox.Show("Mô tả phải từ 5 đến 150 ký tự");
+        return false;
+    }
+
+    // Kiểm tra ký tự đặc biệt trong mô tả
+    string specialChars = @"!@#$%^&*()_+={}[]|\/:;'<>,.?";
+    if (txtMota.Text.Any(c => specialChars.Contains(c)))
+    {
+        MessageBox.Show("Mô tả chỉ được chứa chữ, số và dấu chấm câu cơ bản");
+        return false;
+    }
+
+    if (txtTheloai.Text == "" || txtSoluong.Text == "" || txtNamXB.Text == "" || txtTenSach.Text == ""|| txtGiaBia.Text=="")
+    {
+        MessageBox.Show("Vui lòng nhập đủ thông tin");
+        return false;
+    }
+    return true;
+}
 
         public bool isNull()
         {

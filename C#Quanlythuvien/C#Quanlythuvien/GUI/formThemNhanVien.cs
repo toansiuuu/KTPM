@@ -179,15 +179,40 @@ namespace GUI
             nv.Sdt=sdt;
             return nv;
         }
+        private bool ValidateAddress(string input)
+        {
+            // Kiểm tra độ dài
+            if (input.Trim().Length < 5 || input.Trim().Length > 255)
+            {
+                MessageBox.Show("Địa chỉ phải từ 5 đến 255 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra ký tự hợp lệ
+            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s,/#]+$";
+            if (!Regex.IsMatch(input.Trim(), pattern))
+            {
+                MessageBox.Show("Địa chỉ chỉ được chứa chữ, số, dấu phẩy, khoảng trắng, dấu / và #!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
         public bool checkValidForm() {
-           if(txt_ten.Text.Trim().Length==0 || txt_diachi.Text.Trim().Length==0 || /*txt_chucvu.Text.Trim().Length == 0 ||*/ txt_sdt.Text.Trim().Length == 0)
+           if(txt_ten.Text.Trim().Length==0 || txt_diachi.Text.Trim().Length==0 || txt_sdt.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn chưa nhập đầy đủ","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            // Kiểm tra địa chỉ
+            if (!ValidateAddress(txt_diachi.Text))
+            {
+                return false;
+            }
+
             if (!IsOnlyLetters(txt_ten.Text))
             {
-                MessageBox.Show("Tên chỉ được chứa chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên chỉ được chứa chữ","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

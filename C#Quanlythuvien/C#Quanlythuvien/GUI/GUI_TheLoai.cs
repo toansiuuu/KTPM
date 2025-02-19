@@ -100,6 +100,22 @@ namespace GUI
                 MessageBox.Show("Bạn chưa nhập đầy đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            // Kiểm tra độ dài mô tả (10-100 ký tự)
+            if (rt_moTa.Text.Trim().Length < 10 || rt_moTa.Text.Trim().Length > 100)
+            {
+                MessageBox.Show("Mô tả phải từ 10 đến 100 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Kiểm tra ký tự hợp lệ trong mô tả (chỉ cho phép chữ, số và dấu câu cơ bản)
+            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s\.,!?]+$";
+            if (!Regex.IsMatch(rt_moTa.Text.Trim(), pattern))
+            {
+                MessageBox.Show("Mô tả chỉ được chứa chữ, số và dấu chấm câu cơ bản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (!IsOnlyLetters(txt_ten.Text))
             {
                 MessageBox.Show("Tên chỉ được chứa chữ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

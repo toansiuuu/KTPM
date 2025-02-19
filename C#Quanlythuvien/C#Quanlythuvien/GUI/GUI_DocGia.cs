@@ -246,7 +246,8 @@ namespace GUI
                     {
                         MessageBox.Show("Không thành công");
                     }
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Độc giả này đã có thẻ rồi không thể tạo thêm!", "Thông báo");
                 }
@@ -364,21 +365,26 @@ namespace GUI
         }
         static bool IsValidAddress(string address)
         {
+            // Kiểm tra null hoặc rỗng
             if (string.IsNullOrWhiteSpace(address))
             {
-                return false; // Địa chỉ không được để trống
+                MessageBox.Show("Địa chỉ không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
-            if (address.Length < 5 || address.Length > 100)
+            // Kiểm tra độ dài
+            if (address.Length < 5 || address.Length > 255)
             {
-                return false; // Địa chỉ phải từ 5 đến 100 ký tự
+                MessageBox.Show("Địa chỉ phải từ 5 đến 255 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
-            // Chỉ cho phép chữ cái, số, khoảng trắng và các ký tự hợp lệ: , . -
-            string pattern = @"^[a-zA-Z0-9\s,.-]+$";
-            if (!Regex.IsMatch(address, pattern))
+            // Kiểm tra ký tự hợp lệ
+            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s,/#]+$";
+            if (!Regex.IsMatch(address.Trim(), pattern))
             {
-                return false; // Địa chỉ chứa ký tự không hợp lệ
+                MessageBox.Show("Địa chỉ chỉ được chứa chữ, số, dấu phẩy, khoảng trắng, dấu / và #!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
             return true;
@@ -405,7 +411,7 @@ namespace GUI
                 return false;
             }
             if(!IsValidAddress(txtDiaChiDG.Text)) {
-                MessageBox.Show("Địa chỉ từ 5-100 kí tự không kí tự đặc biệt!", "Thông báo");
+                
                 return false;
             }
             if(!ValidateTenDocGia(txtTenDG.Text))

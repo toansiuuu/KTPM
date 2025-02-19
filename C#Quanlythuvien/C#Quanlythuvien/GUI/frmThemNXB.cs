@@ -40,6 +40,19 @@ namespace GUI
             Regex regex = new Regex(pattern);
             return regex.IsMatch(input);
         }
+        public bool ValidateAddress(string input)
+        {
+            // Kiểm tra độ dài
+            if (input.Trim().Length < 5 || input.Trim().Length > 255)
+            {
+                MessageBox.Show("Địa chỉ phải từ 5 đến 255 ký tự!");
+                return false;
+            }
+
+            // Kiểm tra ký tự hợp lệ
+            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s,/#]+$";
+            return Regex.IsMatch(input.Trim(), pattern);
+        }
         private void bttn_hoanthanh_Click(object sender, EventArgs e)
         {
             if (!ValidateTenNXB(tb_tenNXB.Text))
@@ -47,9 +60,9 @@ namespace GUI
                 MessageBox.Show("Tên Không Đúng Định Dạng!");
                 return;
             }
-            if (tb_diachi.Text.Trim().Equals(""))
+            if (!ValidateAddress(tb_diachi.Text))
             {
-                MessageBox.Show("Địa Chỉ Không Đúng Định Dạng!");
+                MessageBox.Show("Địa chỉ chỉ được chứa chữ, số, dấu phẩy, khoảng trắng, dấu / và #!");
                 return;
             }
             if (!ValidateEmail(tb_Email.Text))
