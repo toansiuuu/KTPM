@@ -17,7 +17,7 @@ namespace DAO
             using (SqlConnection connection = DataBaseConnection.Connect())
             {
                 connection.Open();
-                string insertQuery = "INSERT INTO CHITIETPHIEUNHAP(MaPhieuNhap, MaTuaSach, SoLuong, DonGia, ChietKhau) VALUES ";
+                string insertQuery = "INSERT INTO CHITIETPHIEUNHAP(MaPhieuNhap, MaTuaSach, SoLuong, DonGia) VALUES ";
 
                 // Tạo tham số cho mỗi bản ghi
                 List<SqlParameter> parameters = new List<SqlParameter>();
@@ -25,7 +25,7 @@ namespace DAO
                 for (int i = 0; i < list.Count; i++)
                 {
                     ChiTietPhieuNhap ctpn = list[i];
-                    string values = $"(@mpn{i}, @mts{i}, @sl{i}, @dg{i},@ck{i})";
+                    string values = $"(@mpn{i}, @mts{i}, @sl{i}, @dg{i})";
 
                     // Thêm các giá trị của bản ghi vào câu lệnh SQL
                     insertQuery += (i > 0 ? ", " : "") + values;
@@ -35,7 +35,6 @@ namespace DAO
                     parameters.Add(new SqlParameter($"@mts{i}", ctpn.SGMaTuaSach));
                     parameters.Add(new SqlParameter($"@sl{i}", ctpn.SGSoLuong));
                     parameters.Add(new SqlParameter($"@dg{i}", ctpn.SGDonGia));
-                    parameters.Add(new SqlParameter($"@ck{i}", ctpn.SGChietKhau));
                 }
 
                 SqlCommand command = new SqlCommand(insertQuery, connection);
@@ -65,7 +64,6 @@ namespace DAO
                     ctpn.SGSoLuong = reader.GetInt32(2);
                     string a = reader.GetDouble(3).ToString();
                     ctpn.SGDonGia = float.Parse(a);
-                    ctpn.SGChietKhau = reader.GetInt32(4);
                     list.Add(ctpn);
                 }
                 connection.Close();
@@ -78,18 +76,15 @@ namespace DAO
             using (SqlConnection connection = DataBaseConnection.Connect())
             {
                 connection.Open();
-                string updateQuery = "UPDATE TuaSach SET SoLuong = SoLuong + @sl WHERE MaTuaSach = @mts";
-
-                using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                string insertQuery = "UPDATE TuaSach set SoLuong = SoLuong + @sl WHERE MaTuaSach = @mts";
+                using (SqlCommand command = new SqlCommand(insertQuery, connection))
                 {
                     foreach (ChiTietPhieuNhap ctpnItem in ctpn)
                     {
                         command.Parameters.Clear();
                         command.Parameters.AddWithValue("@mts", ctpnItem.SGMaTuaSach);
                         command.Parameters.AddWithValue("@sl", ctpnItem.SGSoLuong);
-                       
-
-                        rowAffected += command.ExecuteNonQuery(); // Cộng dồn số dòng bị ảnh hưởng
+                        rowAffected = command.ExecuteNonQuery();
                     }
                 }
 
@@ -97,7 +92,6 @@ namespace DAO
             }
             return rowAffected;
         }
-
         public String getLastMaCS()
         {
             String mapm = "";

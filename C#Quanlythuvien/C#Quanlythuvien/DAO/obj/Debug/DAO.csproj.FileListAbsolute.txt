@@ -52,30 +52,3 @@ D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInput
 D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
 D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
 D:\hk1\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\C-Sharp-QLTV\toansiuuu\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CopyComplete
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
-C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.dll
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DAO.pdb
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.dll
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\bin\Debug\DTO.pdb
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.csproj.Up2Date
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.dll
-C:\Users\ADMIN\Desktop\KTPM\C#Quanlythuvien\C#Quanlythuvien\DAO\obj\Debug\DAO.pdb

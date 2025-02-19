@@ -33,7 +33,6 @@ namespace DAO
                         ts.SGMoTa = reader.GetString(6);
                         ts.SGTrangThai = reader.GetBoolean(7);
                         ts.SGMaTacGia = reader.GetString(8);
-                        ts.SGGiaBia = reader.GetInt32(9);
                         list.Add(ts);
                     }
                     return list;
