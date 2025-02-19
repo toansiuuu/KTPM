@@ -1,4 +1,4 @@
-﻿using DTO;
+using DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -125,7 +125,7 @@ namespace DAO
             using (SqlConnection connection = DataBaseConnection.Connect())
             {
                 connection.Open();
-                string query = "SELECT * FROM NhanVien WHERE MaNhanVien = @manv";
+                string query = "SELECT MaNhanVien, TenNV, GioiTinh, NgaySinh, DiaChi, SDT, ChucVu, TrangThai FROM NhanVien WHERE MaNhanVien = @manv";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@manv", maNV);
                 SqlDataReader reader = command.ExecuteReader();
@@ -139,11 +139,24 @@ namespace DAO
                     nv.Sdt = reader.GetString(5);
                     nv.ChucVu = reader.GetString(6);
                     nv.TrangThai = reader.GetBoolean(7);
-                    nv.Img = reader.GetString(8);
                 }
                 connection.Close();
             }
             return nv;
+        }
+        public bool KiemTraTenDangNhap(string tenDangNhap)
+        {
+            using (SqlConnection connection = DataBaseConnection.Connect())
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM TaiKhoan WHERE TenDangNhap = @tenDangNhap";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@tenDangNhap", tenDangNhap);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
         }
     }
 }
