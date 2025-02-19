@@ -51,6 +51,7 @@
             this.bttn_mo = new System.Windows.Forms.Button();
             this.bttn_khoa = new System.Windows.Forms.Button();
             this.bttn_gan = new System.Windows.Forms.Button();
+            this.bttn_capTK = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +128,7 @@
             this.groupBox2.Controls.Add(this.bttn_mo);
             this.groupBox2.Controls.Add(this.bttn_khoa);
             this.groupBox2.Controls.Add(this.bttn_gan);
+            this.groupBox2.Controls.Add(this.bttn_capTK);
             this.groupBox2.Location = new System.Drawing.Point(31, 29);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1259, 223);
@@ -276,6 +278,16 @@
             this.bttn_gan.UseVisualStyleBackColor = true;
             this.bttn_gan.Click += new System.EventHandler(this.bttn_gan_Click);
             // 
+            // bttn_capTK
+            // 
+            this.bttn_capTK.Location = new System.Drawing.Point(20, 150);
+            this.bttn_capTK.Name = "bttn_capTK";
+            this.bttn_capTK.Size = new System.Drawing.Size(120, 40);
+            this.bttn_capTK.TabIndex = 13;
+            this.bttn_capTK.Text = "Cấp MK";
+            this.bttn_capTK.UseVisualStyleBackColor = true;
+            this.bttn_capTK.Click += new System.EventHandler(this.bttn_capTK_Click);
+            // 
             // GUI_TaiKhoan
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -318,5 +330,6 @@
         private System.Windows.Forms.ComboBox cb_ChucVu;
         private System.Windows.Forms.ComboBox cb_taikhoan;
         private System.Windows.Forms.Button bttn_mo;
+        private System.Windows.Forms.Button bttn_capTK;
     }
 }

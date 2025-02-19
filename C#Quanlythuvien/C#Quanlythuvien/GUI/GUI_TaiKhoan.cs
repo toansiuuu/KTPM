@@ -429,5 +429,10 @@ namespace GUI
                 MessageBox.Show("Vui lòng chọn nhân viên cần cấp tài khoản và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void lsTK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
