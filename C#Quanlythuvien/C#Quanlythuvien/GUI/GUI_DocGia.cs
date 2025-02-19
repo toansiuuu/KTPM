@@ -337,11 +337,51 @@ namespace GUI
         }
 
 
-        public static bool IsPhoneNumberValid(string phoneNumber)
+        static bool IsPhoneNumberValid(string str)
         {
-            // Số điện thoại phải có 10 chữ số và là số nguyên
-            Regex regex = new Regex(@"^\d{10}$");
-            return regex.IsMatch(phoneNumber);
+            // Kiểm tra độ dài phải đúng 10 chữ số
+            if (str.Length != 10)
+            {
+                return false;
+            }
+
+            // Kiểm tra ký tự đầu tiên có phải là '0' không
+            if (str[0] != '0')
+            {
+                return false;
+            }
+
+            // Kiểm tra tất cả các ký tự có phải là chữ số hay không
+            for (int i = 1; i < str.Length; i++)  // Bắt đầu từ index 1 vì đã kiểm tra ký tự đầu
+            {
+                if (!char.IsDigit(str[i]))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        static bool IsValidAddress(string address)
+        {
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                return false; // Địa chỉ không được để trống
+            }
+
+            if (address.Length < 5 || address.Length > 100)
+            {
+                return false; // Địa chỉ phải từ 5 đến 100 ký tự
+            }
+
+            // Chỉ cho phép chữ cái, số, khoảng trắng và các ký tự hợp lệ: , . -
+            string pattern = @"^[a-zA-Z0-9\s,.-]+$";
+            if (!Regex.IsMatch(address, pattern))
+            {
+                return false; // Địa chỉ chứa ký tự không hợp lệ
+            }
+
+            return true;
         }
 
         public static bool IsEmailValid(string email)
@@ -351,11 +391,26 @@ namespace GUI
             return regex.IsMatch(email);
         }
 
+        public bool ValidateTenDocGia(string input)
+        {
+            string pattern = @"^[\p{L}\s']+$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(input);
+        }
         private bool CheckvalidateDG()
         {
             if (txtTenDG.Text == "" || txtDiaChiDG.Text == "" || txtPhoneDG.Text == "" || txtEmailDG.Text == "" || txtDiaChiDG.Text == "")
             {
                 MessageBox.Show("Cần nhập đầy đủ thông tin", "Thông báo");
+                return false;
+            }
+            if(!IsValidAddress(txtDiaChiDG.Text)) {
+                MessageBox.Show("Địa chỉ từ 5-100 kí tự không kí tự đặc biệt!", "Thông báo");
+                return false;
+            }
+            if(!ValidateTenDocGia(txtTenDG.Text))
+            {
+                MessageBox.Show("Tên Không Đúng Định Dạng!");
                 return false;
             }
             if (!IsPhoneNumberValid(txtPhoneDG.Text))
@@ -506,5 +561,7 @@ namespace GUI
                 LoadTableDocGia();
             }
         }
+
+        
     }
 }
