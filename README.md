@@ -18,8 +18,9 @@ Dự án Quản lý thư viện là một ứng dụng Windows Forms được x�
 3. Kiểm tra và cấu hình kết nối cơ sở dữ liệu trong file `DataBaseConnection.cs` bên thư mục DAO (nếu cần).
 Cấu hình như hình:
 ![Cấu hình kết nối SQL Server](https://raw.githubusercontent.com/toansiuuu/KTPM/main/images/cauhinh.png)
-4. Build giải pháp bằng cách chọn Build -> Build Solution.
-5. Chạy ứng dụng bằng cách nhấn F5 (Debug) hoặc chọn Debug -> Start Debugging.
+4. Import database bằng file QLTV.bacpac vào SSMS.
+5. Build giải pháp bằng cách chọn Build -> Build Solution.
+6. Chạy ứng dụng bằng cách nhấn F5 (Debug) hoặc chọn Debug -> Start Debugging.
 
 ## Hướng dẫn sử dụng
 
