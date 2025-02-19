@@ -130,7 +130,7 @@ namespace GUI
             
             switch (chucVu)
             {
-                case "quanlý":
+                case "quảnlý":
                 case "quanly":
                     maQuyen = "Q01";
                     break;
