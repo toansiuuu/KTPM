@@ -33,7 +33,7 @@
             this.rd_nam = new System.Windows.Forms.RadioButton();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.txt_diachi = new System.Windows.Forms.TextBox();
-            this.dp_ngaysinh = new System.Windows.Forms.DateTimePicker();
+            this.txt_ngaysinh = new System.Windows.Forms.TextBox();
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.txt_ma = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,19 +62,20 @@
             // rd_nu
             // 
             this.rd_nu.AutoSize = true;
-            this.rd_nu.ForeColor = System.Drawing.SystemColors.Control;
+            this.rd_nu.ForeColor = System.Drawing.Color.White;
             this.rd_nu.Location = new System.Drawing.Point(100, 8);
             this.rd_nu.Name = "rd_nu";
             this.rd_nu.Size = new System.Drawing.Size(45, 20);
             this.rd_nu.TabIndex = 18;
             this.rd_nu.Text = "Nữ";
             this.rd_nu.UseVisualStyleBackColor = true;
+            this.rd_nu.Enabled = false;
             // 
             // rd_nam
             // 
             this.rd_nam.AutoSize = true;
             this.rd_nam.Checked = true;
-            this.rd_nam.ForeColor = System.Drawing.SystemColors.Control;
+            this.rd_nam.ForeColor = System.Drawing.Color.White;
             this.rd_nam.Location = new System.Drawing.Point(23, 8);
             this.rd_nam.Name = "rd_nam";
             this.rd_nam.Size = new System.Drawing.Size(57, 20);
@@ -82,6 +83,7 @@
             this.rd_nam.TabStop = true;
             this.rd_nam.Text = "Nam";
             this.rd_nam.UseVisualStyleBackColor = true;
+            this.rd_nam.Enabled = false;
             // 
             // txt_sdt
             // 
@@ -101,14 +103,14 @@
             this.txt_diachi.Size = new System.Drawing.Size(215, 30);
             this.txt_diachi.TabIndex = 78;
             // 
-            // dp_ngaysinh
+            // txt_ngaysinh
             // 
-            this.dp_ngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dp_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dp_ngaysinh.Location = new System.Drawing.Point(500, 324);
-            this.dp_ngaysinh.Name = "dp_ngaysinh";
-            this.dp_ngaysinh.Size = new System.Drawing.Size(179, 30);
-            this.dp_ngaysinh.TabIndex = 77;
+            this.txt_ngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ngaysinh.Location = new System.Drawing.Point(500, 324);
+            this.txt_ngaysinh.Name = "txt_ngaysinh";
+            this.txt_ngaysinh.ReadOnly = true;
+            this.txt_ngaysinh.Size = new System.Drawing.Size(179, 30);
+            this.txt_ngaysinh.TabIndex = 77;
             // 
             // txt_ten
             // 
@@ -246,7 +248,7 @@
             this.Controls.Add(this.txt_chucvu);
             this.Controls.Add(this.txt_sdt);
             this.Controls.Add(this.txt_diachi);
-            this.Controls.Add(this.dp_ngaysinh);
+            this.Controls.Add(this.txt_ngaysinh);
             this.Controls.Add(this.txt_ten);
             this.Controls.Add(this.txt_ma);
             this.Controls.Add(this.label7);
@@ -274,7 +276,7 @@
         private System.Windows.Forms.RadioButton rd_nam;
         private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.TextBox txt_diachi;
-        private System.Windows.Forms.DateTimePicker dp_ngaysinh;
+        private System.Windows.Forms.TextBox txt_ngaysinh;
         private System.Windows.Forms.TextBox txt_ten;
         private System.Windows.Forms.TextBox txt_ma;
         private System.Windows.Forms.Label label7;
