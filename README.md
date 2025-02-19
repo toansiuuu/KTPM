@@ -13,14 +13,11 @@ Dự án Quản lý thư viện là một ứng dụng Windows Forms được x�
 - SSMS (Microsoft SQL Server Management Studio)
 
 ### Hướng dẫn cài đặt:
-1. Clone dự án từ kho lưu trữ:
-   ```sh
-git clone <repository_url>
-   ```
+1. Clone dự án từ kho lưu trữ: git clone https://github.com/toansiuuu/KTPM
 2. Mở file solution: `C#Quanlythuvien.sln` bằng Visual Studio.
 3. Kiểm tra và cấu hình kết nối cơ sở dữ liệu trong file `DataBaseConnection.cs` bên thư mục DAO (nếu cần).
 Cấu hình như hình:
-![Cấu hình kết nối SQL Server](./cauhinh.png)
+![Cấu hình kết nối SQL Server](https://raw.githubusercontent.com/toansiuuu/KTPM/main/images/cauhinh.png)
 4. Build giải pháp bằng cách chọn Build -> Build Solution.
 5. Chạy ứng dụng bằng cách nhấn F5 (Debug) hoặc chọn Debug -> Start Debugging.
 
