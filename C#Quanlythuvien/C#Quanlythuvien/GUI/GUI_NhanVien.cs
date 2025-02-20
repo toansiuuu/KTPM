@@ -208,6 +208,8 @@ namespace GUI
         }
         static void ExportToExcel(List<NhanVienDTO> list, string filePath)
         {
+
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             // Tạo một gói Excel
             using (var package = new ExcelPackage())
             {
