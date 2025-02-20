@@ -72,14 +72,14 @@ namespace DAO
             using (SqlConnection connection = DataBaseConnection.Connect())
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM NHACUNGCAP where TrangThai = 1", connection);
+                SqlCommand command = new SqlCommand("SELECT MaNCC, TenNCC FROM NHACUNGCAP where TrangThai = 1", connection);
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-
-                    list.Add(reader.GetString(0));
+                    string maNCC = reader.GetString(0);
+                    string tenNCC = reader.GetString(1);
+                    list.Add($"{maNCC} - {tenNCC}");
                 }
-
                 connection.Close();
             }
             return list;

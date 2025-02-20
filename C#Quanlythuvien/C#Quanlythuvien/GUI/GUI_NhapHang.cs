@@ -72,12 +72,30 @@ namespace GUI
         }
         public void getAllNCC()
         {
+            // Tính toán độ rộng cần thiết cho combobox
+            int maxWidth = 0;
             List<string> list = pnBUS.getAllNCC();
-            foreach (string s in list)
+            using (Graphics g = cb_NCC.CreateGraphics())
             {
-                cb_NCC.Items.Add(s);
+                foreach (string ncc in list)
+                {
+                    string item = ncc;
+                    int width = (int)g.MeasureString(item, cb_NCC.Font).Width;
+                    maxWidth = Math.Max(maxWidth, width);
+                }
             }
-            cb_NCC.SelectedIndex= 0;
+            
+            // Thêm thêm một chút padding và set độ rộng
+            cb_NCC.DropDownWidth = maxWidth + 20;
+
+            // Thêm items vào combobox
+            cb_NCC.Items.Clear();
+            foreach (string ncc in list)
+            {
+                cb_NCC.Items.Add(ncc);
+            }
+            if (cb_NCC.Items.Count > 0)
+                cb_NCC.SelectedIndex = 0;
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -200,7 +218,7 @@ namespace GUI
         {
             PhieuNhap pn = new PhieuNhap();
             pn.SGMaPhieuNhap = txt_maPhieuNhap.Text;
-            pn.SGMaNCC=cb_NCC.SelectedItem.ToString();
+            pn.SGMaNCC = cb_NCC.SelectedItem.ToString();
             pn.SGMaNhanVien = txt_maNhanVien.Text;
             pn.SGTongTien = float.Parse(txt_tongTIen.Text);
             pn.SGNgayNhap = dp_ngayNhap.Value;
