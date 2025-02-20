@@ -196,11 +196,11 @@ namespace GUI
                 return false;
             }
 
-            // Kiểm tra ký tự hợp lệ
-            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s,/#]+$";
+            // Kiểm tra ký tự hợp lệ - chỉ cho phép chữ, số, dấu phẩy (,) và dấu gạch chéo (/)
+            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s,/]+$";
             if (!Regex.IsMatch(input.Trim(), pattern))
             {
-                MessageBox.Show("Địa chỉ chỉ được chứa chữ, số, dấu phẩy, khoảng trắng, dấu / và #!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Địa chỉ chỉ được chứa chữ, số, dấu phẩy (,) và dấu gạch chéo (/)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

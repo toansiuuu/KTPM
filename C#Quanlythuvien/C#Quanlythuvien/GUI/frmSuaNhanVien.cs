@@ -215,7 +215,7 @@ namespace GUI
                 return false;
             }
             if(!IsValidAddress(txt_diachi.Text)){
-                MessageBox.Show("Độ dài địa chỉ 5 đến 100 và không chứa kí tự đặc biệt", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Độ dài địa chỉ 5 đến 255 và chỉ được chứa chữ cái, số, khoảng trắng, dấu phẩy (,) và dấu gạch chéo (/)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (!IsOnlyDigits(txt_sdt.Text))
@@ -244,13 +244,13 @@ namespace GUI
                 return false; // Địa chỉ không được để trống
             }
 
-            if (address.Length < 5 || address.Length > 100)
+            if (address.Length < 5 || address.Length > 255)
             {
-                return false; // Địa chỉ phải từ 5 đến 100 ký tự
+                return false; // Địa chỉ phải từ 5 đến 255 ký tự
             }
 
-            // Chỉ cho phép chữ cái, số, khoảng trắng và các ký tự hợp lệ: , . -
-            string pattern = @"^[a-zA-Z0-9\s,.-]+$";
+            // Chỉ cho phép chữ cái, số, khoảng trắng, dấu phẩy (,) và dấu gạch chéo (/)
+            string pattern = @"^[a-zA-ZÀ-ỹ0-9\s,/]+$";
             if (!Regex.IsMatch(address, pattern))
             {
                 return false; // Địa chỉ chứa ký tự không hợp lệ
