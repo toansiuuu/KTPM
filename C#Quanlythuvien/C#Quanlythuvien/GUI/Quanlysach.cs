@@ -75,7 +75,7 @@ namespace GUI
             ts.SGMaNXB = cbNxb.SelectedItem.ToString();
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
             ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
-            ts.SGMaTacGia = cbTacGia.SelectedItem.ToString();
+            ts.SGMaTacGia = cbTacGia.SelectedItem.ToString().Split('-')[0].Trim();
             ts.SGTrangThai = status1;
             //Anh
             ts.SGImage = path_anh;
@@ -93,7 +93,7 @@ namespace GUI
             ts.SGMaNXB = cbNxb.SelectedItem.ToString();
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
             ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
-            ts.SGMaTacGia = cbTacGia.SelectedItem.ToString();
+            ts.SGMaTacGia = cbTacGia.SelectedItem.ToString().Split('-')[0].Trim();
             ts.SGTrangThai = true;
             //Anh
             ts.SGImage = path_anh;
@@ -109,8 +109,15 @@ namespace GUI
         private void setModel(TuaSach ts){
 
             //MaTacGia
-            int index = cbTacGia.Items.IndexOf(ts.SGMaTacGia);
-            cbTacGia.SelectedIndex = index;
+            List<TacGiaDTO> ls_tacgia = tg_BUS.getAllTacGia();
+            foreach (TacGiaDTO x in ls_tacgia)
+            {
+                if (x.MaTG == ts.SGMaTacGia)
+                {
+                    cbTacGia.SelectedItem = $"{x.MaTG} - {x.TenTG}";
+                    break;
+                }
+            }
 
             //MaNXB
             int index1 = cbNxb.Items.IndexOf(ts.SGMaNXB);
@@ -170,9 +177,25 @@ namespace GUI
         {
             List<TacGiaDTO> ls_tacgia = tg_BUS.getAllTacGia();
             cbTacGia.Items.Clear();
+            
+            // Tính toán độ rộng cần thiết cho combobox
+            int maxWidth = 0;
+            using (Graphics g = cbTacGia.CreateGraphics())
+            {
+                foreach (TacGiaDTO x in ls_tacgia)
+                {
+                    string item = $"{x.MaTG} - {x.TenTG}";
+                    int width = (int)g.MeasureString(item, cbTacGia.Font).Width;
+                    maxWidth = Math.Max(maxWidth, width);
+                }
+            }
+            
+            // Thêm thêm một chút padding và set độ rộng
+            cbTacGia.DropDownWidth = maxWidth + 20;
+            
             foreach (TacGiaDTO x in ls_tacgia)
             {
-                cbTacGia.Items.Add(x.MaTG);
+                cbTacGia.Items.Add($"{x.MaTG} - {x.TenTG}");
             }
         }
         private String getTheloai(TuaSach ts)
@@ -346,7 +369,7 @@ namespace GUI
         private Boolean checkValidateThem()
 {
     NhaXuatBan nxb = nxb_BUS.getNhaXuatBanByID(cbNxb.SelectedItem.ToString());
-    TacGiaDTO tg = tg_BUS.getTacGiaByMa(cbTacGia.SelectedItem.ToString());
+    TacGiaDTO tg = tg_BUS.getTacGiaByMa(cbTacGia.SelectedItem.ToString().Split('-')[0].Trim());
 
     if (!nxb.SGTrangThai) {
         MessageBox.Show("Nhà xuất bản ngừng hoạt động");
