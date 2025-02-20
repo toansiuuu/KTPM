@@ -1,6 +1,4 @@
-﻿using BUS;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +10,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using BUS;
+using DTO;
 
 namespace GUI
 {
@@ -20,9 +20,13 @@ namespace GUI
         private static String path_anh = "images.jpg";
         private static String duongdananh = "";
         NhanVienBUS bus = new NhanVienBUS();
+        private readonly BUS.RoleService _roleService;
+        private string _currentRole;
+
         public frmSuaNhanVien(bool isVisibleBttnSua)
         {
             InitializeComponent();
+            _roleService = new BUS.RoleService();
             if (!isVisibleBttnSua)
             {
                 btn_CapNhat.Visible = false;
@@ -45,23 +49,32 @@ namespace GUI
         {
             if (checkValidForm())
             {
+                string selectedRole = cb_role.SelectedItem.ToString();
+                if (selectedRole != _currentRole && !_roleService.ValidateRoleAssignment(selectedRole, _currentRole))
+                {
+                    MessageBox.Show($"Không thể chuyển sang chức vụ {selectedRole}! Kiểm tra lại số lượng nhân viên cho mỗi chức vụ.", 
+                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cb_role.SelectedItem = _currentRole;
+                    return;
+                }
+
                 NhanVienDTO nv = getModel();
                 if (bus.updateNhanVien(nv) > 0)
                 {
                     String sourcePath = duongdananh;
-                    String destinationPath = getPath();                   
+                    String destinationPath = getPath();
                     int lastBackslash = destinationPath.LastIndexOf('\\');
-                    string temp = destinationPath.Substring(lastBackslash+1);
+                    string temp = destinationPath.Substring(lastBackslash + 1);
                     if (sourcePath != destinationPath)
                     {
                         File.Copy(sourcePath, destinationPath, true);
                     }
-                    MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thành công");
                     Onbtn_CapNhat_Clicked();
                 }
                 else
                 {
-                    MessageBox.Show("Không thể cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thất bại");
                 }
             }
         }
@@ -145,27 +158,9 @@ namespace GUI
             string imagePath = Path.Combine(projectDirectory2, "Image", "NhanVien", nv.Img);
             pictureBox1.Image = new Bitmap(imagePath);
             path_anh = nv.Img;
-            string chucVu = nv.ChucVu.ToLower();
-            int indexChucVu=-1;
-            if(chucVu=="quản trị viên")
-            {
-                indexChucVu = 0;
-            }
-            else if(chucVu=="quản lý")
-            {
-                indexChucVu = 1;
-
-            }
-            else if (chucVu == "thủ thư")
-            {
-                indexChucVu = 2;
-
-            }
-            else if (chucVu == "nhân viên kho")
-            {
-                indexChucVu = 3;
-            }
-            cb_role.SelectedIndex = indexChucVu;
+            _currentRole = nv.ChucVu;
+            LoadAvailableRoles(_currentRole);
+            cb_role.SelectedItem = _currentRole;
             duongdananh = imagePath;
         }
         public NhanVienDTO getModel()
@@ -305,6 +300,12 @@ namespace GUI
             return imagePath;
         }
 
-       
+        private void LoadAvailableRoles(string currentRole)
+        {
+            cb_role.Items.Clear();
+            var availableRoles = _roleService.GetAvailableRoles(currentRole);
+            availableRoles.Add(currentRole); // Luôn cho phép giữ nguyên role hiện tại
+            cb_role.Items.AddRange(availableRoles.Distinct().ToArray());
+        }
     }
 }

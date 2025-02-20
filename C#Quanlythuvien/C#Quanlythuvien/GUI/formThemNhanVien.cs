@@ -1,6 +1,4 @@
-﻿using BUS;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,19 +9,23 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace GUI
 {
     public partial class formThemNhanVien : Form
     {
         NhanVienBUS bus = new NhanVienBUS();
+        private readonly BUS.RoleService _roleService;
         private String path_anh = "images.jpg";
         private String duongdananh = "";
         public formThemNhanVien()
         {
             InitializeComponent();
+            _roleService = new BUS.RoleService();
             setCungMaNV();
-            cb_role.SelectedIndex = 0;
+            LoadAvailableRoles();
         }
         public event EventHandler btn_Them_Clicked;
         private void Onbtn_Them_Clicked()
@@ -42,6 +44,14 @@ namespace GUI
         {
             if (checkValidForm())
             {
+                string selectedRole = cb_role.SelectedItem.ToString();
+                if (!_roleService.CanAssignRole(selectedRole))
+                {
+                    MessageBox.Show($"Không thể thêm nhân viên với chức vụ {selectedRole}! Đã đạt giới hạn số lượng.", 
+                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 NhanVienDTO nv = getModel();
                 if (bus.insertNhanVien(nv) > 0)
                 {
@@ -53,16 +63,14 @@ namespace GUI
                     {
                         File.Copy(sourcePath, destinationPath, true);
                     }
-
-                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công");
                     Onbtn_Them_Clicked();
                 }
                 else
                 {
-                    MessageBox.Show("Không thể thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thất bại");
                 }
             }
-           
         }
         public void displayImage(string imgPath)
         {
@@ -283,6 +291,19 @@ namespace GUI
             return true;
         }
 
-        
+        private void LoadAvailableRoles()
+        {
+            cb_role.Items.Clear();
+            var availableRoles = _roleService.GetAvailableRoles();
+            if (availableRoles.Count == 0)
+            {
+                MessageBox.Show("Không có chức vụ nào khả dụng!", "Thông báo", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btn_them.Enabled = false;
+                return;
+            }
+            cb_role.Items.AddRange(availableRoles.ToArray());
+            cb_role.SelectedIndex = 0;
+        }
     }
 }
