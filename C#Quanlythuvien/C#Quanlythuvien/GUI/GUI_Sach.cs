@@ -145,7 +145,6 @@ namespace GUI
         }
         private void loadSach(TuaSach ts)
         {
-
             Panel panel = new Panel();
             panel.Size = new Size(268, 385);
 
@@ -220,7 +219,7 @@ namespace GUI
             btnXem.FlatAppearance.BorderSize = 0;
             btnXem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnXem.ForeColor = System.Drawing.Color.Black;
-            btnXem.Location = new System.Drawing.Point(92, 58);
+            btnXem.Location = new System.Drawing.Point(50, 58);
             btnXem.Size = new System.Drawing.Size(81, 39);
             btnXem.Text = "Xem";
             btnXem.UseVisualStyleBackColor = false;
@@ -231,7 +230,25 @@ namespace GUI
                 infoSach.ShowDialog();
             };
 
+            Label lbStatus = new Label();
+            lbStatus.AutoSize = false;
+            lbStatus.Size = new Size(100, 39);
+            lbStatus.Location = new System.Drawing.Point(140, 58);
+            lbStatus.TextAlign = ContentAlignment.MiddleCenter;
+            lbStatus.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+            if (ts.SGTrangThai == true)
+            {
+                lbStatus.Text = "Hiện";
+                lbStatus.ForeColor = Color.Green;
+            }
+            else
+            {
+                lbStatus.Text = "Ẩn";
+                lbStatus.ForeColor = Color.Red;
+            }
+
             panel2.Controls.Add(btnXem);
+            panel2.Controls.Add(lbStatus);
             panel2.Controls.Add(lbname);
 
 

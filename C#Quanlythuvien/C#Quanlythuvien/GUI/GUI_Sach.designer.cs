@@ -36,6 +36,7 @@
             this.txtTiemKiem = new System.Windows.Forms.TextBox();
             this.btnTimkiem = new FontAwesome.Sharp.IconButton();
             this.cbTimkiem = new System.Windows.Forms.ComboBox();
+            this.lbStatus = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -216,5 +217,6 @@
         private FontAwesome.Sharp.IconButton btnTimkiem;
         private System.Windows.Forms.ComboBox cbTimkiem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbStatus;
     }
 }
