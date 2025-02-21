@@ -84,7 +84,7 @@ namespace GUI
             txtPhone.Text = "";
             txtNgaysinh.Text = "";
             dateMothe.Value = DateTime.Now;
-            dateHethan.Value = dateMothe.Value.AddDays(31);
+            dateHethan.Value = DateTime.Now.AddMonths(3);
         }
 
         private void LoadFormDg()
@@ -187,7 +187,7 @@ namespace GUI
             txtPhone.Text = "";
             txtNgaysinh.Text = "";
             dateMothe.Value = DateTime.Now;
-            dateHethan.Value = dateMothe.Value.AddDays(31);
+            dateHethan.Value = DateTime.Now.AddMonths(3);
         }
 
         private TheThuVien getModel()
@@ -202,28 +202,9 @@ namespace GUI
 
         private bool checkValidate()
         {
-            DateTime now = DateTime.Now;
-            DateTime mo = dateMothe.Value;
-            DateTime het = dateHethan.Value;
-            
             if (cbDocGia.SelectedIndex == -1)
             {
                 MessageBox.Show("Chưa chọn độc giả!", "Thông báo");
-                return false;
-            }
-            if (dateMothe.Value > dateHethan.Value)
-            {
-                MessageBox.Show("Không được để ngày mở thẻ lớn hơn hạn thẻ", "Thông báo");
-                return false;
-            }
-            if (het - mo <= TimeSpan.FromDays(30))
-            {
-                MessageBox.Show("Hạn thẻ phải ít nhất 30 ngày so với ngày mở thẻ", "Thông báo");
-                return false;
-            }
-            if (dateMothe.Value <= now.Date)
-            {
-                MessageBox.Show("Ngày mở thẻ phải lớn hơn ngày hiện tại", "Thông báo");
                 return false;
             }
             return true;
@@ -567,7 +548,5 @@ namespace GUI
                 LoadTableDocGia();
             }
         }
-
-        
     }
 }

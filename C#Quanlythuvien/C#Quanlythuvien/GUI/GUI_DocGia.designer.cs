@@ -376,6 +376,7 @@
             // 
             // dateHethan
             // 
+            this.dateHethan.Enabled = false;
             this.dateHethan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateHethan.Location = new System.Drawing.Point(173, 661);
             this.dateHethan.Name = "dateHethan";
@@ -403,6 +404,7 @@
             // 
             // dateMothe
             // 
+            this.dateMothe.Enabled = false;
             this.dateMothe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateMothe.Location = new System.Drawing.Point(173, 595);
             this.dateMothe.Name = "dateMothe";
