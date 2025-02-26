@@ -341,20 +341,44 @@ namespace GUI
                 string firstColumnValue = selectedRow.SubItems[0].Text;
                 string secondColumnValue = selectedRow.SubItems[1].Text;
                 int thirdColumnValue = Convert.ToInt32(selectedRow.SubItems[3].Text);
+
+                // Kiểm tra mã sách trong danh sách chi tiết phiếu nhập hiện tại
+                bool isExisting = false;
+                int existingDiscount = 0;
+                foreach (ListViewItem item in listView1.Items)
+                {
+                    if (item.SubItems[0].Text == firstColumnValue)
+                    {
+                        isExisting = true;
+                        existingDiscount = int.Parse(item.SubItems[3].Text);
+                        break;
+                    }
+                }
+
                 frmThemTS_PN frmThem = new frmThemTS_PN();
                 this.sendDataed += new sendData(frmThem.setThongTin);
                 sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue);
+
+                if (isExisting)
+                {
+                    frmThem.setDiscount(existingDiscount);
+                    frmThem.disableDiscountInput();
+                }
+                else
+                {
+                    frmThem.enableDiscountInput();
+                }
+
                 frmThem.sendCTPn_ED += loadChiTietPhieuNhap;
                 frmThem.ShowDialog();
-                
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn sách dưới table","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn sách dưới table", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-       
+
         public void loadChiTietPhieuNhap(ChiTietPhieuNhap ctpn)
         {
             bool check = false;

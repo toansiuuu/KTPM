@@ -24,6 +24,20 @@ namespace GUI
             txt_donGia.Text= giaBia.ToString();
 
         }
+         public void setDiscount(int discount)
+    {
+        txt_chietKhau.Text = discount.ToString();
+    }
+
+    public void disableDiscountInput()
+    {
+        txt_chietKhau.Enabled = false;
+    }
+
+    public void enableDiscountInput()
+    {
+        txt_chietKhau.Enabled = true;
+    }
 
         private void label1_Click(object sender, EventArgs e)
         {
