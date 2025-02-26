@@ -191,7 +191,15 @@ namespace GUI
             for (int i = 0; i < listView1.Items.Count; i++)
             {
                 ListViewItem item = listView1.Items[i];
-                sum += float.Parse(item.SubItems[2].Text) * int.Parse(item.SubItems[1].Text);
+
+                int soLuong = int.Parse(item.SubItems[1].Text);
+                float donGia = float.Parse(item.SubItems[2].Text);
+                int chietKhau = int.Parse(item.SubItems[3].Text);
+
+                // Tính thành tiền theo công thức: Số lượng * Đơn giá * (1 - Chiết khấu/100)
+                float thanhTien = soLuong * donGia * (1 - chietKhau / 100f);
+
+                sum += thanhTien;
             }
             txt_tongTIen.Text = sum.ToString();
         }
