@@ -72,7 +72,7 @@ namespace GUI
             ts.SGTenTuaSach = txtTenSach.Text;
             ts.SGMoTa = txtMota.Text;
             ts.SGNamXB = Convert.ToInt32(txtNamXB.Text);
-            ts.SGMaNXB = cbNxb.SelectedItem.ToString();
+            ts.SGMaNXB = cbNxb.SelectedItem.ToString().Split('-')[0].Trim();
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
             ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
             ts.SGMaTacGia = cbTacGia.SelectedItem.ToString().Split('-')[0].Trim();
@@ -90,7 +90,7 @@ namespace GUI
             ts.SGTenTuaSach = txtTenSach.Text;
             ts.SGMoTa = txtMota.Text;
             ts.SGNamXB = Convert.ToInt32(txtNamXB.Text);
-            ts.SGMaNXB = cbNxb.SelectedItem.ToString();
+            ts.SGMaNXB = cbNxb.SelectedItem.ToString().Split('-')[0].Trim();
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
             ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
             ts.SGMaTacGia = cbTacGia.SelectedItem.ToString().Split('-')[0].Trim();
@@ -99,7 +99,6 @@ namespace GUI
             ts.SGImage = path_anh;
 
             return ts;
-
         }
         private List<String> getModelTheLoai(string chuoi)
         {
@@ -168,9 +167,26 @@ namespace GUI
         {
             List<NhaXuatBan> list_nxb = nxb_BUS.getAllListNXB();
             cbNxb.Items.Clear();
+            
+            // Tính toán độ rộng cần thiết cho combobox
+            int maxWidth = 0;
+            using (Graphics g = cbNxb.CreateGraphics())
+            {
+                foreach (NhaXuatBan x in list_nxb)
+                {
+                    string item = $"{x.SGMaNXB} - {x.SGTenNXB}";
+                    int width = (int)g.MeasureString(item, cbNxb.Font).Width;
+                    maxWidth = Math.Max(maxWidth, width);
+                }
+            }
+            
+            // Thêm thêm một chút padding và set độ rộng
+            cbNxb.DropDownWidth = maxWidth + 20;
+
+            // Thêm items vào combobox
             foreach (NhaXuatBan x in list_nxb)
             {
-                cbNxb.Items.Add(x.SGMaNXB);
+                cbNxb.Items.Add($"{x.SGMaNXB} - {x.SGTenNXB}");
             }
         }
         private void loadComboxTacGia()
