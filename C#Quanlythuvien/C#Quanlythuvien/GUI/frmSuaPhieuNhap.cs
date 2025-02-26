@@ -32,9 +32,10 @@ namespace GUI
         }
         private void frmSuaPhieuNhap_Load(object sender, EventArgs e)
         {
-            listView2.Columns[0].Width = (int)(listView2.Width / 3);
-            listView2.Columns[1].Width = (int)(listView2.Width / 3);
-            listView2.Columns[2].Width = (int)(listView2.Width / 3);
+            listView2.Columns[0].Width = (int)(listView2.Width / 4);
+            listView2.Columns[1].Width = (int)(listView2.Width / 4);
+            listView2.Columns[2].Width = (int)(listView2.Width / 4);
+            listView2.Columns[3].Width = (int)(listView2.Width / 4);
             listView2.View = View.Details;
             listView2.GridLines = true;
             listView2.FullRowSelect = true;
@@ -69,6 +70,7 @@ namespace GUI
                 item.Text = ts.SGMaTuaSach; // Thiết lập giá trị cho cột chính (cột 0)
                 item.SubItems.Add(ts.SGTenTuaSach); // Cột 1
                 item.SubItems.Add(ts.SGSoLuong.ToString()); // Cột 3
+                item.SubItems.Add(ts.SGGiaBia.ToString()); // Cột 4
                 listView2.Items.Add(item);
             }
         }
@@ -81,7 +83,7 @@ namespace GUI
                 item.Text = ctpn.SGMaTuaSach; // Thiết lập giá trị cho cột chính (cột 0)
                 item.SubItems.Add(ctpn.SGSoLuong.ToString()); // Cột 1
                 item.SubItems.Add(ctpn.SGDonGia.ToString()); // Cột 3
-                item.SubItems.Add(ctpn.SGChietKhau.ToString()); // Cột 3
+                item.SubItems.Add(ctpn.SGChietKhau.ToString()); // Cột 4
                 listView1.Items.Add(item);
             }
         }
@@ -107,7 +109,7 @@ namespace GUI
         {
             executeTimKiem();
         }
-        public delegate void sendData(string ma, string ten,int gia);
+        public delegate void sendData(string ma, string ten,int gia,int chietkhau);
         public sendData sendDataed;
         private void button7_Click(object sender, EventArgs e)
         {
@@ -120,7 +122,7 @@ namespace GUI
                 string firstColumnValue = selectedRow.SubItems[0].Text;
                 string secondColumnValue = selectedRow.SubItems[1].Text;
                 int thirdColumnValue = int.Parse(selectedRow.SubItems[2].Text);
-
+                int fourColumnValue = int.Parse(selectedRow.SubItems[3].Text);
                 // Kiểm tra mã sách trong danh sách chi tiết phiếu nhập hiện tại
                 ChiTietPhieuNhap existingCTPN = GetChiTietPhieuNhapByMaTuaSach(firstColumnValue);
                 frmThemTS_PN frmThem = new frmThemTS_PN();
@@ -128,18 +130,18 @@ namespace GUI
                 if (existingCTPN != null)
                 {
                     // Nếu đã tồn tại, lấy chiết khấu cũ và disable ô nhập chiết khấu
-                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, existingCTPN.SGChietKhau);
+                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, fourColumnValue);
                     frmThem.DisableChietKhauInput();
                 }
                 else
                 {
                     // Nếu chưa tồn tại, enable ô nhập chiết khấu để nhập mới
-                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, 0);
+                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, fourColumnValue);
                     frmThem.EnableChietKhauInput();
                 }
 
                 this.sendDataed += new sendData(frmThem.setThongTin);
-                sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue);
+                sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue, fourColumnValue);
                 frmThem.sendCTPn_ED += loadChiTietPhieuNhap;
                 frmThem.ShowDialog();
             }

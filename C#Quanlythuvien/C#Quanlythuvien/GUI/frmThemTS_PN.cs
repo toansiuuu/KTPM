@@ -17,12 +17,7 @@ namespace GUI
         {
             InitializeComponent();
         }
-        public void setThongTin(string ma, string ten, int gia)
-        {
-            txt_maSach.Text = ma;
-            txt_tenSach.Text = ten;
-            txt_donGia.Text = gia.ToString();
-        }
+      
         public  void setThongTin(string maSach,string tenSach,int giaBia, int chietKhau)
         {
             txt_maSach.Text = maSach;
