@@ -56,6 +56,7 @@
             this.txt_tongTIen = new System.Windows.Forms.TextBox();
             this.txt_maPhieuNhap = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -183,7 +184,7 @@
             // txt_maNCC
             // 
             this.txt_maNCC.BackColor = System.Drawing.Color.White;
-            this.txt_maNCC.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_maNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_maNCC.Location = new System.Drawing.Point(260, 105);
             this.txt_maNCC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_maNCC.Multiline = true;
@@ -206,7 +207,8 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader9,
+            this.columnHeader1});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(30, 326);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -349,7 +351,7 @@
             // txt_maPhieuNhap
             // 
             this.txt_maPhieuNhap.BackColor = System.Drawing.Color.White;
-            this.txt_maPhieuNhap.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_maPhieuNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_maPhieuNhap.Location = new System.Drawing.Point(260, 60);
             this.txt_maPhieuNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_maPhieuNhap.Multiline = true;
@@ -368,6 +370,10 @@
             this.label1.Size = new System.Drawing.Size(362, 54);
             this.label1.TabIndex = 62;
             this.label1.Text = "Sửa phiếu nhập";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Chiết Khấu";
             // 
             // frmSuaPhieuNhap
             // 
@@ -421,5 +427,6 @@
         private System.Windows.Forms.TextBox txt_maPhieuNhap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_maNCC;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

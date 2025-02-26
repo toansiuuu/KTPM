@@ -39,9 +39,10 @@ namespace GUI
             listView2.GridLines = true;
             listView2.FullRowSelect = true;
 
-            listView1.Columns[0].Width = (int)(listView1.Width / 3);
-            listView1.Columns[1].Width = (int)(listView1.Width / 3);
-            listView1.Columns[2].Width = (int)(listView1.Width / 3);
+            listView1.Columns[0].Width = (int)(listView1.Width / 4);
+            listView1.Columns[1].Width = (int)(listView1.Width / 4);
+            listView1.Columns[2].Width = (int)(listView1.Width / 4);
+            listView1.Columns[3].Width = (int)(listView1.Width / 4);
             listView1.View = View.Details;
             listView1.GridLines = true;
             listView1.FullRowSelect = true;
@@ -80,6 +81,7 @@ namespace GUI
                 item.Text = ctpn.SGMaTuaSach; // Thiết lập giá trị cho cột chính (cột 0)
                 item.SubItems.Add(ctpn.SGSoLuong.ToString()); // Cột 1
                 item.SubItems.Add(ctpn.SGDonGia.ToString()); // Cột 3
+                item.SubItems.Add(ctpn.SGChietKhau.ToString()); // Cột 3
                 listView1.Items.Add(item);
             }
         }
@@ -150,6 +152,7 @@ namespace GUI
                 item.Text = ctpn.SGMaTuaSach; // Thiết lập giá trị cho cột chính (cột 0)
                 item.SubItems.Add(ctpn.SGSoLuong.ToString()); // Cột 1
                 item.SubItems.Add(ctpn.SGDonGia.ToString()); // Cột 3
+                item.SubItems.Add(ctpn.SGChietKhau.ToString()); // Cột 3
                 listView1.Items.Add(item);
                 capNhatGia();
             }
@@ -249,6 +252,7 @@ namespace GUI
                 ctpnItem.SGMaTuaSach = item.SubItems[0].Text;
                 ctpnItem.SGSoLuong = int.Parse(item.SubItems[1].Text);
                 ctpnItem.SGDonGia = float.Parse(item.SubItems[2].Text);
+                ctpnItem.SGChietKhau = int.Parse(item.SubItems[3].Text);
                 ctpn.Add(ctpnItem);
 
             }
