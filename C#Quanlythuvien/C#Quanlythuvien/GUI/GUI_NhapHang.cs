@@ -341,20 +341,54 @@ namespace GUI
                 string firstColumnValue = selectedRow.SubItems[0].Text;
                 string secondColumnValue = selectedRow.SubItems[1].Text;
                 int thirdColumnValue = Convert.ToInt32(selectedRow.SubItems[3].Text);
+
+                // Kiểm tra mã sách trong danh sách chi tiết phiếu nhập hiện tại
+                ChiTietPhieuNhap existingCTPN = GetChiTietPhieuNhapByMaTuaSach(firstColumnValue);
                 frmThemTS_PN frmThem = new frmThemTS_PN();
+
+                if (existingCTPN != null)
+                {
+                    // Nếu đã tồn tại, lấy chiết khấu cũ và disable ô nhập chiết khấu
+                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, existingCTPN.SGChietKhau);
+                    frmThem.DisableChietKhauInput();
+                }
+                else
+                {
+                    // Nếu chưa tồn tại, enable ô nhập chiết khấu để nhập mới
+                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, 0);
+                    frmThem.EnableChietKhauInput();
+                }
+
                 this.sendDataed += new sendData(frmThem.setThongTin);
                 sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue);
                 frmThem.sendCTPn_ED += loadChiTietPhieuNhap;
                 frmThem.ShowDialog();
-                
             }
             else
             {
-                MessageBox.Show("Bạn chưa chọn sách dưới table","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn chưa chọn sách dưới table", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-       
+        private ChiTietPhieuNhap GetChiTietPhieuNhapByMaTuaSach(string maTuaSach)
+        {
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if (item.SubItems[0].Text == maTuaSach)
+                {
+                    return new ChiTietPhieuNhap
+                    {
+                        SGMaTuaSach = item.SubItems[0].Text,
+                        SGSoLuong = int.Parse(item.SubItems[1].Text),
+                        SGDonGia = float.Parse(item.SubItems[2].Text),
+                        SGChietKhau = int.Parse(item.SubItems[3].Text)
+                    };
+                }
+            }
+            return null;
+        }
+
+
         public void loadChiTietPhieuNhap(ChiTietPhieuNhap ctpn)
         {
             bool check = false;

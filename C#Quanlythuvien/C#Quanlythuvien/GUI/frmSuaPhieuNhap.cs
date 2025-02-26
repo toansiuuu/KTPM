@@ -119,18 +119,52 @@ namespace GUI
                 // Thực hiện các hành động với dòng đã chọn
                 string firstColumnValue = selectedRow.SubItems[0].Text;
                 string secondColumnValue = selectedRow.SubItems[1].Text;
-                int thirdColumnValue = int.Parse(selectedRow.SubItems[3].Text);
+                int thirdColumnValue = int.Parse(selectedRow.SubItems[2].Text);
+
+                // Kiểm tra mã sách trong danh sách chi tiết phiếu nhập hiện tại
+                ChiTietPhieuNhap existingCTPN = GetChiTietPhieuNhapByMaTuaSach(firstColumnValue);
                 frmThemTS_PN frmThem = new frmThemTS_PN();
+
+                if (existingCTPN != null)
+                {
+                    // Nếu đã tồn tại, lấy chiết khấu cũ và disable ô nhập chiết khấu
+                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, existingCTPN.SGChietKhau);
+                    frmThem.DisableChietKhauInput();
+                }
+                else
+                {
+                    // Nếu chưa tồn tại, enable ô nhập chiết khấu để nhập mới
+                    frmThem.setThongTin(firstColumnValue, secondColumnValue, thirdColumnValue, 0);
+                    frmThem.EnableChietKhauInput();
+                }
+
                 this.sendDataed += new sendData(frmThem.setThongTin);
                 sendDataed(firstColumnValue, secondColumnValue, thirdColumnValue);
                 frmThem.sendCTPn_ED += loadChiTietPhieuNhap;
                 frmThem.ShowDialog();
-
             }
             else
             {
                 MessageBox.Show("Bạn chưa chọn sách dưới table", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private ChiTietPhieuNhap GetChiTietPhieuNhapByMaTuaSach(string maTuaSach)
+        {
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if (item.SubItems[0].Text == maTuaSach)
+                {
+                    return new ChiTietPhieuNhap
+                    {
+                        SGMaTuaSach = item.SubItems[0].Text,
+                        SGSoLuong = int.Parse(item.SubItems[1].Text),
+                        SGDonGia = float.Parse(item.SubItems[2].Text),
+                        SGChietKhau = int.Parse(item.SubItems[3].Text)
+                    };
+                }
+            }
+            return null;
         }
         public void loadChiTietPhieuNhap(ChiTietPhieuNhap ctpn)
         {
@@ -206,6 +240,18 @@ namespace GUI
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (listView1.Items.Count == 1)
+            {
+                ListViewItem selectedRow = listView1.Items[0];
+                int soLuong = int.Parse(selectedRow.SubItems[1].Text);
+
+                if (soLuong == 1)
+                {
+                    MessageBox.Show("Không thể xóa hết sản phẩm. Phiếu nhập phải có ít nhất một sản phẩm với số lượng lớn hơn 1.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             if (listView1.SelectedItems.Count > 0)
             {
                 ListViewItem selectedRow = listView1.SelectedItems[0];
@@ -213,7 +259,6 @@ namespace GUI
                 string inputSL = Interaction.InputBox("Nhập vào số lượng cần xóa:", "Số Lượng", "1");
                 if (inputSL != "")
                 {
-
                     if (ValidateSoLuongNhap(inputSL, soLuong))
                     {
                         int inputSL1 = int.Parse(inputSL);
@@ -231,15 +276,12 @@ namespace GUI
                     else
                     {
                         MessageBox.Show("Số lượng không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     }
-
                 }
             }
             else
             {
                 MessageBox.Show("Bạn chưa chọn sách dưới table", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
         }
         public bool ValidateSoLuongNhap(String input, int soLuong)
