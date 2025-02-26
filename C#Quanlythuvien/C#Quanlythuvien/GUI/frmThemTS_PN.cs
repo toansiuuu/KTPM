@@ -17,22 +17,12 @@ namespace GUI
         {
             InitializeComponent();
         }
-      
-        public  void setThongTin(string maSach,string tenSach,int giaBia, int chietKhau)
+        public  void setThongTin(string maSach,string tenSach,int giaBia)
         {
             txt_maSach.Text = maSach;
             txt_tenSach.Text = tenSach;
             txt_donGia.Text= giaBia.ToString();
-            txt_chietKhau.Text = chietKhau.ToString();
-        }
-        public void DisableChietKhauInput()
-        {
-            txt_chietKhau.Enabled = false;
-        }
 
-        public void EnableChietKhauInput()
-        {
-            txt_chietKhau.Enabled = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
