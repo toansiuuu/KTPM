@@ -72,16 +72,21 @@ namespace GUI
             ts.SGTenTuaSach = txtTenSach.Text;
             ts.SGMoTa = txtMota.Text;
             ts.SGNamXB = Convert.ToInt32(txtNamXB.Text);
-            ts.SGMaNXB = cbNxb.SelectedItem.ToString().Split('-')[0].Trim();
+            // Tách lấy mã NXB từ chuỗi "MaNXB - TenNXB"
+            string[] nxbParts = cbNxb.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
+            ts.SGMaNXB = nxbParts[0].Trim(); // Lấy phần mã NXB
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
             ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
-            ts.SGMaTacGia = cbTacGia.SelectedItem.ToString().Split('-')[0].Trim();
+            // Tách lấy mã tác giả từ chuỗi "MaTG - TenTG"
+            string[] tgParts = cbTacGia.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
+            ts.SGMaTacGia = tgParts[0].Trim(); // Lấy phần mã tác giả
             ts.SGTrangThai = status1;
             //Anh
             ts.SGImage = path_anh;
 
             return ts;
         }
+
         private TuaSach getModel()
         {
             //Sach
@@ -90,15 +95,75 @@ namespace GUI
             ts.SGTenTuaSach = txtTenSach.Text;
             ts.SGMoTa = txtMota.Text;
             ts.SGNamXB = Convert.ToInt32(txtNamXB.Text);
-            ts.SGMaNXB = cbNxb.SelectedItem.ToString().Split('-')[0].Trim();
+            // Tách lấy mã NXB từ chuỗi "MaNXB - TenNXB"
+            string[] nxbParts = cbNxb.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
+            ts.SGMaNXB = nxbParts[0].Trim(); // Lấy phần mã NXB
             ts.SGSoLuong = Convert.ToInt32(txtSoluong.Text);
             ts.SGGiaBia = Convert.ToInt32(txtGiaBia.Text);
-            ts.SGMaTacGia = cbTacGia.SelectedItem.ToString().Split('-')[0].Trim();
+            // Tách lấy mã tác giả từ chuỗi "MaTG - TenTG"
+            string[] tgParts = cbTacGia.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
+            ts.SGMaTacGia = tgParts[0].Trim(); // Lấy phần mã tác giả
             ts.SGTrangThai = true;
             //Anh
             ts.SGImage = path_anh;
 
             return ts;
+        }
+
+        private Boolean checkValidateThem()
+        {
+            // Tách lấy mã NXB từ chuỗi "MaNXB - TenNXB"
+            string[] nxbParts = cbNxb.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
+            string maNXB = nxbParts[0].Trim();
+            NhaXuatBan nxb = nxb_BUS.getNhaXuatBanByID(maNXB);
+
+            // Tách lấy mã tác giả từ chuỗi "MaTG - TenTG"
+            string[] tgParts = cbTacGia.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None);
+            string maTG = tgParts[0].Trim();
+            TacGiaDTO tg = tg_BUS.getTacGiaByMa(maTG);
+
+            if (!nxb.SGTrangThai)
+            {
+                MessageBox.Show("Nhà xuất bản ngừng hoạt động");
+                return false;
+            }
+            if (!tg.TinhTrang)
+            {
+                MessageBox.Show("Tác giả ngừng hoạt động");
+                return false;
+            }
+            if (!IsYearFormat(txtNamXB.Text))
+            {
+                MessageBox.Show("Nhập năm sai định dạng");
+                return false;
+            }
+            if (!IsInteger(txtGiaBia.Text))
+            {
+                MessageBox.Show("Nhập sai định dạng giá");
+                return false;
+            }
+
+            // Kiểm tra độ dài mô tả
+            if (txtMota.Text.Length < 5 || txtMota.Text.Length > 150)
+            {
+                MessageBox.Show("Mô tả phải từ 5 đến 150 ký tự");
+                return false;
+            }
+
+            // Kiểm tra ký tự đặc biệt trong mô tả
+            string specialChars = @"!@#$%^&*()_+={}[]|\/:;'<>,.?";
+            if (txtMota.Text.Any(c => specialChars.Contains(c)))
+            {
+                MessageBox.Show("Mô tả chỉ được chứa chữ, số và dấu chấm câu cơ bản");
+                return false;
+            }
+
+            if (txtTheloai.Text == "" || txtSoluong.Text == "" || txtNamXB.Text == "" || txtTenSach.Text == "" || txtGiaBia.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+                return false;
+            }
+            return true;
         }
         private List<String> getModelTheLoai(string chuoi)
         {
@@ -382,52 +447,7 @@ namespace GUI
         }
 
 
-        private Boolean checkValidateThem()
-{
-    NhaXuatBan nxb = nxb_BUS.getNhaXuatBanByID(cbNxb.SelectedItem.ToString());
-    TacGiaDTO tg = tg_BUS.getTacGiaByMa(cbTacGia.SelectedItem.ToString().Split('-')[0].Trim());
-
-    if (!nxb.SGTrangThai) {
-        MessageBox.Show("Nhà xuất bản ngừng hoạt động");
-        return false;
-    }
-    if (!tg.TinhTrang)
-    {
-        MessageBox.Show("Tác giả ngừng hoạt động");
-        return false;
-    }
-    if (!IsYearFormat(txtNamXB.Text))
-    {
-        MessageBox.Show("Nhập năm sai định dạng");
-        return false;
-    }
-    if (!IsInteger(txtGiaBia.Text)){
-        MessageBox.Show("Nhập sai định dạng giá");
-        return false;
-    }
     
-    // Kiểm tra độ dài mô tả
-    if (txtMota.Text.Length < 5 || txtMota.Text.Length > 150)
-    {
-        MessageBox.Show("Mô tả phải từ 5 đến 150 ký tự");
-        return false;
-    }
-
-    // Kiểm tra ký tự đặc biệt trong mô tả
-    string specialChars = @"!@#$%^&*()_+={}[]|\/:;'<>,.?";
-    if (txtMota.Text.Any(c => specialChars.Contains(c)))
-    {
-        MessageBox.Show("Mô tả chỉ được chứa chữ, số và dấu chấm câu cơ bản");
-        return false;
-    }
-
-    if (txtTheloai.Text == "" || txtSoluong.Text == "" || txtNamXB.Text == "" || txtTenSach.Text == ""|| txtGiaBia.Text=="")
-    {
-        MessageBox.Show("Vui lòng nhập đủ thông tin");
-        return false;
-    }
-    return true;
-}
 
         public bool isNull()
         {

@@ -28,3 +28,9 @@ C:\Users\ADMIN\Downloads\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.
 C:\Users\ADMIN\Downloads\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\Downloads\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.dll
 C:\Users\ADMIN\Downloads\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.pdb
+C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\bin\Debug\DTO.dll
+C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\bin\Debug\DTO.pdb
+C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.dll
+C:\Users\toanh\OneDrive\Tài liệu\GitHub\KTPM\C#Quanlythuvien\C#Quanlythuvien\DTO\obj\Debug\DTO.pdb
