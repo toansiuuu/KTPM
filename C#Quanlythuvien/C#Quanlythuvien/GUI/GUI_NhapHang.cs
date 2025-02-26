@@ -28,6 +28,10 @@ namespace GUI
             setCungMaPhieuNhap();
             getAllNCC();
             cb_timKiem.SelectedIndex = 0;
+            
+            // Thiết lập font mặc định cho form và tất cả controls
+            Font defaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            SetAllControlsFont(this, defaultFont);
         }
         public GUI_NhapHang(String chiTiet,String maNV)
         {
@@ -37,6 +41,10 @@ namespace GUI
             txt_maNhanVien.Text = maNV;
             cb_timKiem.SelectedIndex = 0;
             SetUpAccessPermissions(chiTiet);
+            
+            // Thiết lập font mặc định cho form và tất cả controls
+            Font defaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            SetAllControlsFont(this, defaultFont);
         }
         public void SetUpAccessPermissions(String chiTiet)
         {
@@ -815,6 +823,23 @@ namespace GUI
             }
         }
 
-        
+        private void SetAllControlsFont(Control control, Font font)
+        {
+            control.Font = font;
+            // Đệ quy set font cho tất cả controls con
+            foreach (Control child in control.Controls)
+            {
+                SetAllControlsFont(child, font);
+            }
+            
+            // Xử lý đặc biệt cho ListView để set font cho columns
+            if (control is ListView listView)
+            {
+                foreach (ColumnHeader column in listView.Columns)
+                {
+                    column.Width = -2; // Tự động điều chỉnh độ rộng cột
+                }
+            }
+        }
     }
 }
