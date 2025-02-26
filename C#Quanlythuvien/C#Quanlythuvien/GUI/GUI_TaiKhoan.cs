@@ -56,15 +56,8 @@ namespace GUI
             }
             else
             {
-                // Gán quyền
-                if (chiTiet.Contains("Gan"))
-                {
-                    bttn_gan.Visible = true;
-                }
-                else 
-                {
-                    bttn_gan.Visible = false;
-                }
+                // Luôn ẩn nút gán quyền
+                bttn_gan.Visible = false;
 
                 // Khóa
                 if (chiTiet.Contains("Khoa"))

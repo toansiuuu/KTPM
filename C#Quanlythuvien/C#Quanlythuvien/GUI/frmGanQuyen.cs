@@ -129,7 +129,7 @@ namespace GUI
                             TaiKhoan tk = new TaiKhoan(maNV, matkhau, maquyen,true);
                             if(tkBUS.insertTaiKhoan(tk)>0)
                             {
-                                MessageBox.Show("Tạo Tạo Tài Với Quyền Thành Công!");
+                                MessageBox.Show("Tạo Tài Khoản Với Quyền Thành Công!");
                                 this.Close();
                             }
                             else
