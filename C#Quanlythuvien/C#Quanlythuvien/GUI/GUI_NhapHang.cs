@@ -218,10 +218,12 @@ namespace GUI
         {
             PhieuNhap pn = new PhieuNhap();
             pn.SGMaPhieuNhap = txt_maPhieuNhap.Text;
-            pn.SGMaNCC = cb_NCC.SelectedItem.ToString();
+            // Tách lấy mã NCC từ chuỗi "MaNCC - TenNCC"
+            string[] nccParts = cb_NCC.Text.Split(new string[] { " - " }, StringSplitOptions.None);
+            pn.SGMaNCC = nccParts[0].Trim(); // Lấy phần mã NCC
             pn.SGMaNhanVien = txt_maNhanVien.Text;
-            pn.SGTongTien = float.Parse(txt_tongTIen.Text);
             pn.SGNgayNhap = dp_ngayNhap.Value;
+            pn.SGTongTien = float.Parse(txt_tongTIen.Text);
             pn.SGTinhTrang = false;
             return pn;
         }
