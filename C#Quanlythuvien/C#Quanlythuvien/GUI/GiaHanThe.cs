@@ -26,7 +26,7 @@ namespace GUI
         private void LoadForm(TheThuVien ttv)
         {
             dateBatdau.Value = DateTime.Now;
-            dateKetThuc.Value = dateBatdau.Value.AddDays(31);
+            dateKetThuc.Value = dateBatdau.Value.AddMonths(3);
             ttv_giahan = ttv;
         }
         private Boolean checkDieukien()
