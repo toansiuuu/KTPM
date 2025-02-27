@@ -40,9 +40,9 @@ namespace GUI
                 MessageBox.Show("Không được để ngày bắt đầu lớn hơn hạn thẻ", "Thông báo");
                 return false;
             }
-            if (kt - bd <= TimeSpan.FromDays(30))
+            if (kt < bd.AddMonths(3))  // Kiểm tra hạn thẻ phải ít nhất 3 tháng so với ngày mở thẻ
             {
-                MessageBox.Show("Hạn thẻ phải ít nhất 30 ngày so với ngày mở thẻ", "Thông báo");
+                MessageBox.Show("Hạn thẻ phải ít nhất 3 tháng so với ngày mở thẻ", "Thông báo");
                 return false;
             }
             if (bd <= now.Date)
@@ -52,6 +52,7 @@ namespace GUI
             }
             return true;
         }
+
         private void btnGiaHan_Click(object sender, EventArgs e)
         {
             if (checkDieukien())
