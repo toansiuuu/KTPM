@@ -51,5 +51,9 @@ namespace BUS
         {
             return dao.deleteNhaCungCap(maNCC);
         }
+        public bool isTenNCCExists(string tenNCC)
+        {
+            return dao.isTenNCCExists(tenNCC);
+        }
     }
 }

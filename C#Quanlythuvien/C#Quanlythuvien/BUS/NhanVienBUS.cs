@@ -36,5 +36,9 @@ namespace BUS
         {
             return dao.updateNhanVien(nv);
         }
+        public bool isSDTExists(string sdt)
+        {
+            return dao.isSDTExists(sdt);
+        }
     }
 }
