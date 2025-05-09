@@ -75,6 +75,11 @@ namespace GUI
                 MessageBox.Show("Email Không Đúng Định Dạng!");
                 return;
             }
+            if (nccBUS.isTenNCCExists(tb_tenNCC.Text))
+            {
+                MessageBox.Show("Tên Nhà Cung Cấp Đã Tồn Tại!");
+                return;
+            }
             NhaCungCap ncc = new NhaCungCap(tb_maNCC.Text, tb_tenNCC.Text, tb_diachi.Text, tb_Email.Text, true);
             if (nccBUS.insertNhaCungCap(ncc) > 0)
             {

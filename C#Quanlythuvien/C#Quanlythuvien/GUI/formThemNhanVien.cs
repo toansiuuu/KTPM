@@ -228,6 +228,12 @@ namespace GUI
                 MessageBox.Show("SDT chỉ được chứa số và phải đủ 10 số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            if (bus.isSDTExists(txt_sdt.Text))
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại trong hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             /*
             if (!IsRoleValid(txt_chucvu.Text))
             {
