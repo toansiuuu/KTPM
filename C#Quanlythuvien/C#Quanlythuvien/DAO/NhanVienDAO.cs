@@ -132,5 +132,20 @@ namespace DAO
             }
             return rowsAffected;
         }
+
+        public bool isSDTExists(string sdt)
+        {
+            using (SqlConnection connection = DataBaseConnection.Connect())
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM NhanVien WHERE sdt = @sdt";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@sdt", sdt);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
     }
 }

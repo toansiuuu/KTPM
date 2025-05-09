@@ -153,5 +153,19 @@ namespace DAO
             }
             return rowsAffected;
         }
+        public bool isTenNCCExists(string tenNCC)
+        {
+            using (SqlConnection connection = DataBaseConnection.Connect())
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM NhaCungCap WHERE tenNCC = @tenNCC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@tenNCC", tenNCC);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
     }
 }
