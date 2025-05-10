@@ -77,6 +77,7 @@
             this.rdo_mapm = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.bttn_xoaTatCa = new System.Windows.Forms.Button();
             this.bttn_xoa = new System.Windows.Forms.Button();
             this.bttn_hoantat = new System.Windows.Forms.Button();
             this.bttn_them = new System.Windows.Forms.Button();
@@ -608,6 +609,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.bttn_xoaTatCa);
             this.groupBox6.Controls.Add(this.bttn_xoa);
             this.groupBox6.Controls.Add(this.bttn_hoantat);
             this.groupBox6.Controls.Add(this.bttn_them);
@@ -618,6 +620,16 @@
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Thao Tác";
+            // 
+            // bttn_xoaTatCa
+            // 
+            this.bttn_xoaTatCa.Location = new System.Drawing.Point(6, 100);
+            this.bttn_xoaTatCa.Name = "bttn_xoaTatCa";
+            this.bttn_xoaTatCa.Size = new System.Drawing.Size(150, 32);
+            this.bttn_xoaTatCa.TabIndex = 3;
+            this.bttn_xoaTatCa.Text = "Xóa Tất Cả";
+            this.bttn_xoaTatCa.UseVisualStyleBackColor = true;
+            this.bttn_xoaTatCa.Click += new System.EventHandler(this.bttn_xoaTatCa_Click);
             // 
             // bttn_xoa
             // 
@@ -1184,5 +1196,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Button bttn_xoaTatCa;
     }
 }

@@ -47,6 +47,7 @@ namespace GUI
             tb_mapm2.Text = pmBUS.getLastMaPM();
             cbbox_tendocgia2.DropDownStyle = ComboBoxStyle.DropDownList;
             rdo_masach2.Checked = true;
+            dtp_timngay.Value = DateTime.Now;
         }
         public GUI_MuonSach(String chiTiet,String maNV)
         {
@@ -264,6 +265,28 @@ namespace GUI
                         }
                     }
                 }
+                else if (rdo_ngay.Checked)
+                {
+                    DateTime searchDate = dtp_timngay.Value.Date;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        String mapm = dt.Rows[i][0].ToString();
+                        bool found = false;
+                        foreach (PhieuMuon pm in listPM)
+                        {
+                            if (pm.SGMaPhieuMuon.Equals(mapm) && pm.SGNgayMuon.Date == searchDate)
+                            {
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found)
+                        {
+                            dt.Rows.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
             }
         }
         public void FilterStatus()
@@ -340,6 +363,7 @@ namespace GUI
         {
             Filter();
         }
+
         private void cbbox_tendocgia2_SelectedIndexChanged(object sender, EventArgs e)
         {
             String madg = "";
@@ -482,6 +506,22 @@ namespace GUI
             else
             {
                 MessageBox.Show("Cần Chọn một sách để xóa!");
+            }
+        }
+
+        private void bttn_xoaTatCa_Click(object sender, EventArgs e)
+        {
+            if (lsTSMuon.Items.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa tất cả sách đã chọn?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    lsTSMuon.Items.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Danh sách sách đã chọn đang trống!");
             }
         }
 
