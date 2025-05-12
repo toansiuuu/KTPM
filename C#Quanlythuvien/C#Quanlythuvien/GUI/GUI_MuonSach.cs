@@ -265,28 +265,6 @@ namespace GUI
                         }
                     }
                 }
-                else if (rdo_ngay.Checked)
-                {
-                    DateTime searchDate = dtp_timngay.Value.Date;
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        String mapm = dt.Rows[i][0].ToString();
-                        bool found = false;
-                        foreach (PhieuMuon pm in listPM)
-                        {
-                            if (pm.SGMaPhieuMuon.Equals(mapm) && pm.SGNgayMuon.Date == searchDate)
-                            {
-                                found = true;
-                                break;
-                            }
-                        }
-                        if (!found)
-                        {
-                            dt.Rows.RemoveAt(i);
-                            i--;
-                        }
-                    }
-                }
             }
         }
         public void FilterStatus()
@@ -528,11 +506,27 @@ namespace GUI
         private void bttn_hoantat_Click(object sender, EventArgs e)
         {
             DateTime selectedDate = dtp_hantra2.Value;
+            DateTime ngayMuon = dtp_ngaymuon2.Value;
+            TimeSpan diff = selectedDate - ngayMuon;
+            
             if (selectedDate.Date <= DateTime.Now.Date)
             {
                 MessageBox.Show("Hạn Trả Phải Lớn Hơn Ngày Mượn!");
                 return;
             }
+            
+            if (diff.Days < 1)
+            {
+                MessageBox.Show("Thời gian mượn tối thiểu là 1 ngày!");
+                return;
+            }
+            
+            if (diff.Days > 14)
+            {
+                MessageBox.Show("Thời gian mượn tối đa là 14 ngày!");
+                return;
+            }
+            
             if (cbbox_tendocgia2.SelectedIndex<0)
             {
                 MessageBox.Show("Vui Lòng Chọn Độc Giả!");
