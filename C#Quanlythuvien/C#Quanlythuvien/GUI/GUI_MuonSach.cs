@@ -467,17 +467,17 @@ namespace GUI
                     }
                     else
                     {
-
                         if (Convert.ToInt32(inputSL) == soLuong)
                         {
                             lsTSMuon.Items.RemoveAt(lsTSMuon.SelectedItems[0].Index);
+                            MessageBox.Show("Xóa sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
                             lsTSMuon.SelectedItems[0].SubItems[2].Text =
                                 (soLuong - Convert.ToInt32(inputSL)).ToString();
+                            MessageBox.Show("Giảm số lượng sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-
                     }
                 }
             }
